@@ -1,203 +1,897 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>온라인 게임 솔루션 상담 | 문의하기</title>
-  <meta name="description" content="온라인 게임 솔루션, 플랫폼 구축, 운영 상담, 제휴 문의를 위한 간단한 문의 페이지입니다." />
+  <title>Premium Casino & Slot Platform Solutions | Partner Program</title>
+  <meta name="description" content="Premium casino and slot platform solutions with branded domain setup, distributor options, store account opening, and partner applications." />
   <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="온라인 게임 솔루션 상담 | 문의하기" />
-  <meta property="og:description" content="온라인 게임 솔루션, 플랫폼 구축, 운영 상담, 제휴 문의를 위한 간단한 문의 페이지입니다." />
+  <meta property="og:title" content="Premium Casino & Slot Platform Solutions" />
+  <meta property="og:description" content="Launch your own branded gaming platform with premium providers, partner support, and fast deployment." />
   <meta property="og:type" content="website" />
   <style>
+    :root {
+      --bg: #070b14;
+      --bg-soft: #0d1323;
+      --card: rgba(14, 20, 36, 0.78);
+      --line: rgba(255,255,255,0.1);
+      --gold: #f7c96d;
+      --gold-2: #b9852d;
+      --blue: #4aa3ff;
+      --text: #f5f7fb;
+      --muted: #aab3c7;
+      --green: #3fe08e;
+      --shadow: 0 18px 50px rgba(0,0,0,0.45);
+      --radius: 22px;
+    }
+
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(247, 201, 109, 0.14), transparent 28%),
+        radial-gradient(circle at 80% 15%, rgba(74, 163, 255, 0.18), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(63, 224, 142, 0.08), transparent 20%),
+        linear-gradient(180deg, #05070d 0%, #08101d 42%, #060910 100%);
+      min-height: 100vh;
       line-height: 1.6;
+      overflow-x: hidden;
     }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 42px 42px;
+      opacity: 0.18;
+    }
+
     .wrap {
-      max-width: 1080px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 24px;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
     }
-    .hero {
-      padding: 72px 24px 36px;
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(16px);
+      background: rgba(6, 10, 19, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      z-index: 20;
     }
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      font-size: 14px;
-      margin-bottom: 14px;
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
     }
-    h1 {
-      font-size: 42px;
-      margin: 0 0 12px;
-      line-height: 1.15;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
     }
-    .lead {
-      max-width: 760px;
-      font-size: 18px;
-      color: #cbd5e1;
-    }
-    .grid {
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #ffd98a, #8d5a14);
+      color: #111;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin: 28px 0 0;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(247, 201, 109, 0.24);
     }
-    .card, .form-box {
-      background: #111827;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
     }
-    .section {
-      padding: 18px 24px 36px;
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
     }
-    h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
+
+    .nav-links a:hover { color: #fff; }
+
+    .cta-mini {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255,255,255,0.04);
     }
-    .muted {
-      color: #94a3b8;
+
+    .hero {
+      padding: 72px 0 46px;
+      position: relative;
     }
-    ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-    .two-col {
+
+    .hero-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items: start;
+      gap: 26px;
+      align-items: stretch;
     }
-    label {
-      display: block;
-      margin: 12px 0 6px;
-      font-weight: bold;
+
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
     }
-    input, textarea, select {
-      width: 100%;
-      padding: 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: #0b1220;
+
+    .hero-card {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(247,201,109,0.28), transparent 60%);
+      filter: blur(10px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #d7dded;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -1.3px;
+    }
+
+    .gold { color: var(--gold); }
+
+    .lead {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0 0 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      min-height: 52px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      padding: 0 22px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: #101114;
+      background: linear-gradient(135deg, #ffd98a, #d49d38);
+      box-shadow: 0 16px 40px rgba(212, 157, 56, 0.3);
+    }
+
+    .btn-secondary {
       color: #fff;
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.12);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .mini-stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 24px;
+      color: var(--gold);
+    }
+
+    .mini-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .hero-visual {
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 60% 20%, rgba(247,201,109,0.16), transparent 30%),
+        linear-gradient(160deg, rgba(14,20,36,0.95), rgba(8,12,20,0.9));
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.03), transparent 30%),
+        radial-gradient(circle at 20% 80%, rgba(74,163,255,0.12), transparent 24%);
+      pointer-events: none;
+    }
+
+    .showcase-box {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      min-height: 460px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+        radial-gradient(circle at 50% 0%, rgba(255,215,118,0.08), transparent 30%),
+        #0a0f1b;
+      padding: 18px;
+    }
+
+    .showcase-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      color: #d7dded;
+      border: 1px solid rgba(255,255,255,0.07);
+      font-size: 12px;
+    }
+
+    .provider-wall {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .provider-tile {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      min-height: 138px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    .provider-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: #111827;
+    }
+
+    .provider-tile .fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 14px;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      color: #fff;
+      background: radial-gradient(circle at 50% 20%, rgba(247,201,109,0.25), transparent 34%), linear-gradient(135deg, #18233d, #0e1321);
+    }
+
+    .provider-tile::after {
+      content: attr(data-name);
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 10px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.76));
+      text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+    }
+
+    .section {
+      padding: 18px 0 10px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: 34px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-copy {
+      max-width: 860px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .feature-grid,
+    .contact-grid,
+    .form-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .feature-grid { grid-template-columns: repeat(3, 1fr); }
+    .contact-grid { grid-template-columns: repeat(4, 1fr); }
+    .form-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
       font-size: 15px;
     }
-    textarea { min-height: 140px; resize: vertical; }
-    button {
-      margin-top: 16px;
+
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(255,217,138,0.18), rgba(74,163,255,0.14));
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .provider-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .provider-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .provider-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(247,201,109,0.28);
+    }
+
+    .provider-card img {
       width: 100%;
-      border: 0;
-      border-radius: 12px;
-      padding: 15px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      background: #22c55e;
-      color: #06210f;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #121826;
     }
-    .note {
-      font-size: 13px;
-      color: #94a3b8;
-      margin-top: 12px;
-    }
-    .footer {
-      padding: 24px;
+
+    .provider-card .fallback {
+      height: 220px;
+      display: grid;
+      place-items: center;
       text-align: center;
-      color: #94a3b8;
+      padding: 16px;
+      font-size: 22px;
+      font-weight: 900;
+      color: white;
+      background: radial-gradient(circle at top, rgba(247,201,109,0.22), transparent 28%), linear-gradient(135deg, #0f1931, #14171f);
+    }
+
+    .provider-info {
+      padding: 16px 16px 18px;
+    }
+
+    .provider-info strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .provider-info span {
+      color: var(--muted);
       font-size: 14px;
     }
-    a { color: #86efac; }
-    @media (max-width: 900px) {
-      .grid, .two-col { grid-template-columns: 1fr; }
-      h1 { font-size: 34px; }
+
+    .contact-card a {
+      color: #fff;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact-card small {
+      display: block;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .panel-title {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .panel-copy {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    form {
+      display: block;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 7px;
+      font-size: 14px;
+      color: #d9deeb;
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 14px 15px;
+      outline: none;
+      font-size: 15px;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(247,201,109,0.5);
+      box-shadow: 0 0 0 4px rgba(247,201,109,0.09);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .inline-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .highlight-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .highlight-list li {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #dfe5f3;
+    }
+
+    .footer {
+      padding: 32px 0 60px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .form-grid,
+      .feature-grid,
+      .provider-grid,
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+      .provider-wall { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      .hero-grid,
+      .form-grid,
+      .feature-grid,
+      .provider-grid,
+      .contact-grid,
+      .hero-points,
+      .inline-two,
+      .provider-wall { grid-template-columns: 1fr; }
+      .hero-card,
+      .hero-visual,
+      .card { padding: 20px; }
+      h1 { letter-spacing: -0.8px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap hero">
-    <div class="badge">온라인 게임 솔루션 · 플랫폼 문의</div>
-    <h1>간단한 소개와 문의하기가 있는<br/>원페이지 홈페이지</h1>
-    <p class="lead">
-      플랫폼 구축, 운영 상담, 파트너십, B2B 제휴 등 문의를 받을 수 있는 기본형 랜딩페이지입니다.
-      검색엔진이 이해하기 쉬운 제목과 설명 구조를 넣었고, 바로 상담 문의를 남길 수 있게 구성했습니다.
-    </p>
-    <div class="grid">
-      <div class="card">
-        <h3>빠른 소개</h3>
-        <p class="muted">무슨 서비스를 하는지 3초 안에 이해되도록 간단한 문장으로 정리합니다.</p>
+  <div class="topbar">
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="brand-badge">L</div>
+        <div>LuckyOne Gaming Solutions</div>
       </div>
-      <div class="card">
-        <h3>핵심 강점</h3>
-        <p class="muted">플랫폼 구축, 운영 경험, 파트너십, 다국어 지원 등 핵심 장점을 보여줍니다.</p>
-      </div>
-      <div class="card">
-        <h3>문의 유도</h3>
-        <p class="muted">이름, 연락처, 문의 내용만 받아서 상담 전환을 높입니다.</p>
+      <div class="nav-links">
+        <a href="#providers">Providers</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#contact">Contact</a>
+        <a href="#partner">Partner Program</a>
+        <a class="cta-mini" href="#partner">Apply Now</a>
       </div>
     </div>
   </div>
 
-  <div class="wrap section two-col">
-    <div class="card">
-      <h2>서비스 안내</h2>
-      <p class="muted">아래 문구는 바로 수정해서 사용하면 됩니다.</p>
-      <ul>
-        <li>온라인 게임 플랫폼 구축 상담</li>
-        <li>운영 및 마케팅 구조 컨설팅</li>
-        <li>해외 파트너십 및 제휴 문의</li>
-        <li>웹사이트 제작 및 랜딩페이지 구축</li>
-        <li>고객 문의 접수 및 응대 시스템 연동</li>
-      </ul>
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div class="glass hero-card">
+        <div class="eyebrow">Premium Casino & Slot Platform Solutions</div>
+        <h1>Launch a <span class="gold">high-end gaming platform</span> with premium providers, custom domains, and scalable partner options.</h1>
+        <p class="lead">
+          We provide access to major casino and slot providers, branded single-domain setup, distributor opportunities, and store account opening solutions for operators who want a premium presentation and a faster launch.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#partner">Apply for Partnership</a>
+          <a class="btn btn-secondary" href="#contact">Contact Sales</a>
+          <a class="btn btn-secondary" href="https://t.me/yourtelegram" target="_blank" rel="noopener">Get Free Test ID</a>
+        </div>
+        <div class="hero-points">
+          <div class="mini-stat"><strong>10+</strong><span>Top game providers</span></div>
+          <div class="mini-stat"><strong>Custom</strong><span>Single-domain setup</span></div>
+          <div class="mini-stat"><strong>24/7</strong><span>Partner support</span></div>
+        </div>
+      </div>
 
-      <h2 style="margin-top:26px;">추천 문구</h2>
-      <p>
-        신뢰할 수 있는 온라인 게임 솔루션 상담 창구입니다. 서비스 소개, 파트너십 문의,
-        플랫폼 구축 상담을 빠르게 접수하고 확인할 수 있습니다.
-      </p>
-
-      <p class="note">
-        실제 운영 시에는 해당 지역 법규와 광고 정책을 준수하는 서비스 범위로만 게시하세요.
-      </p>
+      <div class="glass hero-visual">
+        <div class="showcase-box">
+          <div class="showcase-head">
+            <div>
+              <strong style="font-size:20px; display:block; margin-bottom:4px;">Premium Provider Showcase</strong>
+              <span style="color:var(--muted); font-size:14px;">Replace the image file names below with your actual provider artwork.</span>
+            </div>
+            <div class="chip">Luxury UI · Casino Style</div>
+          </div>
+          <div class="provider-wall">
+            <div class="provider-tile" data-name="Evolution"><img src="images/evolution.jpg" alt="Evolution" onerror="this.style.display='none'"><div class="fallback">Evolution</div></div>
+            <div class="provider-tile" data-name="Dream Gaming"><img src="images/dreamgaming.jpg" alt="Dream Gaming" onerror="this.style.display='none'"><div class="fallback">Dream Gaming</div></div>
+            <div class="provider-tile" data-name="Microgaming"><img src="images/microgaming.jpg" alt="Microgaming" onerror="this.style.display='none'"><div class="fallback">Microgaming</div></div>
+            <div class="provider-tile" data-name="Pragmatic Play"><img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onerror="this.style.display='none'"><div class="fallback">Pragmatic Play</div></div>
+            <div class="provider-tile" data-name="CQ9"><img src="images/cq9.jpg" alt="CQ9" onerror="this.style.display='none'"><div class="fallback">CQ9</div></div>
+            <div class="provider-tile" data-name="Booongo"><img src="images/booongo.jpg" alt="Booongo" onerror="this.style.display='none'"><div class="fallback">Booongo</div></div>
+            <div class="provider-tile" data-name="Playson"><img src="images/playson.jpg" alt="Playson" onerror="this.style.display='none'"><div class="fallback">Playson</div></div>
+            <div class="provider-tile" data-name="Habanero"><img src="images/habanero.jpg" alt="Habanero" onerror="this.style.display='none'"><div class="fallback">Habanero</div></div>
+            <div class="provider-tile" data-name="PG Soft"><img src="images/pgsoft.jpg" alt="PG Soft" onerror="this.style.display='none'"><div class="fallback">PG Soft</div></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="form-box">
-      <h2>문의하기</h2>
-      <p class="muted">Formspree, Basin, Google Forms, 또는 직접 이메일로 연결할 수 있습니다.</p>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <label for="name">이름</label>
-        <input id="name" name="name" type="text" placeholder="이름을 입력하세요" required />
+  <div class="wrap section" id="solutions">
+    <h2 class="section-title">What We Provide</h2>
+    <p class="section-copy">
+      Our solutions are designed for serious partners who want a polished presentation, multiple provider access, flexible account options, and a clear path to launch, distribution, or store expansion.
+    </p>
+    <div class="feature-grid">
+      <div class="card">
+        <div class="feature-icon">01</div>
+        <h3>All-in-One Provider Access</h3>
+        <p>Use a wide range of premium casino and slot content from major providers through one streamlined setup.</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">02</div>
+        <h3>Single-Domain Branding</h3>
+        <p>Operate with your own dedicated domain for a cleaner identity, stronger presentation, and a more premium customer experience.</p>
+      </div>
+      <div class="card">
+        <div class="feature-icon">03</div>
+        <h3>Distributor & Store Accounts</h3>
+        <p>Open accounts for regional distributors or offline store use cases with scalable expansion options.</p>
+      </div>
+    </div>
+  </div>
 
-        <label for="email">이메일</label>
-        <input id="email" name="email" type="email" placeholder="example@email.com" required />
+  <div class="wrap section" id="providers">
+    <h2 class="section-title">Featured Game Providers</h2>
+    <p class="section-copy">
+      Below is a premium showcase layout for your providers. To display the real image cards, upload the provider images to an <strong>images</strong> folder in your GitHub repository using the exact file names shown on each card.
+    </p>
+    <div class="provider-grid">
+      <div class="provider-card">
+        <img src="images/evolution.jpg" alt="Evolution" onerror="this.style.display='none'">
+        <div class="fallback">Evolution</div>
+        <div class="provider-info"><strong>Evolution</strong><span>Live casino and premium table content</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/dreamgaming.jpg" alt="Dream Gaming" onerror="this.style.display='none'">
+        <div class="fallback">Dream Gaming</div>
+        <div class="provider-info"><strong>Dream Gaming</strong><span>Live dealer content and immersive table experience</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/microgaming.jpg" alt="Microgaming" onerror="this.style.display='none'">
+        <div class="fallback">Microgaming</div>
+        <div class="provider-info"><strong>Microgaming</strong><span>Well-known casino library and classic titles</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onerror="this.style.display='none'">
+        <div class="fallback">Pragmatic Play</div>
+        <div class="provider-info"><strong>Pragmatic Play</strong><span>Popular slot and live content lineup</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/cq9.jpg" alt="CQ9" onerror="this.style.display='none'">
+        <div class="fallback">CQ9</div>
+        <div class="provider-info"><strong>CQ9</strong><span>High-appeal slot portfolio and themed content</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/booongo.jpg" alt="Booongo" onerror="this.style.display='none'">
+        <div class="fallback">Booongo</div>
+        <div class="provider-info"><strong>Booongo</strong><span>Modern slot content and mobile-friendly titles</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/playson.jpg" alt="Playson" onerror="this.style.display='none'">
+        <div class="fallback">Playson</div>
+        <div class="provider-info"><strong>Playson</strong><span>Recognizable slots with strong visual style</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/habanero.jpg" alt="Habanero" onerror="this.style.display='none'">
+        <div class="fallback">Habanero</div>
+        <div class="provider-info"><strong>Habanero</strong><span>Fast-loading slot content and broad themes</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/pgsoft.jpg" alt="Pocket Games Soft" onerror="this.style.display='none'">
+        <div class="fallback">PG Soft</div>
+        <div class="provider-info"><strong>PG Soft</strong><span>Mobile-first premium game presentation</span></div>
+      </div>
+      <div class="provider-card">
+        <img src="images/provider-extra-1.jpg" alt="More Providers" onerror="this.style.display='none'">
+        <div class="fallback">More Providers</div>
+        <div class="provider-info"><strong>More Options</strong><span>Additional provider integrations available on request</span></div>
+      </div>
+    </div>
+  </div>
 
-        <label for="type">문의 종류</label>
-        <select id="type" name="type">
-          <option>일반 문의</option>
-          <option>파트너십 문의</option>
-          <option>플랫폼 구축 상담</option>
-          <option>운영/마케팅 상담</option>
-        </select>
+  <div class="wrap section" id="contact">
+    <h2 class="section-title">Direct Contact Channels</h2>
+    <p class="section-copy">Give your prospects multiple ways to reach you. Replace the placeholders below with your real contact details.</p>
+    <div class="contact-grid">
+      <div class="card contact-card">
+        <h3>Telegram</h3>
+        <a href="https://t.me/yourtelegram" target="_blank" rel="noopener">@yourtelegram</a>
+        <small>Best for fast response and test ID requests.</small>
+      </div>
+      <div class="card contact-card">
+        <h3>WhatsApp</h3>
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener">+1 234 567 890</a>
+        <small>Quick communication for business discussion.</small>
+      </div>
+      <div class="card contact-card">
+        <h3>Email</h3>
+        <a href="mailto:contact@luckyonegames.com">contact@luckyonegames.com</a>
+        <small>For proposals, documents, and detailed requests.</small>
+      </div>
+      <div class="card contact-card">
+        <h3>Free Test ID</h3>
+        <a href="https://t.me/yourtelegram" target="_blank" rel="noopener">Request Now</a>
+        <small>Use this as your main test account conversion path.</small>
+      </div>
+    </div>
+  </div>
 
-        <label for="message">문의 내용</label>
-        <textarea id="message" name="message" placeholder="원하는 내용과 연락 가능한 방법을 적어주세요" required></textarea>
+  <div class="wrap section" id="partner">
+    <div class="form-grid">
+      <div class="card">
+        <h2 class="panel-title">Contact Form</h2>
+        <p class="panel-copy">Use this section for general inquiry, provider information requests, and setup consultation.</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="inline-two">
+            <div>
+              <label for="contact-name">Full Name</label>
+              <input id="contact-name" name="name" type="text" placeholder="Enter your full name" required />
+            </div>
+            <div>
+              <label for="contact-company">Company / Brand</label>
+              <input id="contact-company" name="company" type="text" placeholder="Your company or brand" />
+            </div>
+          </div>
+          <div class="inline-two">
+            <div>
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label for="contact-phone">Phone / WhatsApp</label>
+              <input id="contact-phone" name="phone" type="text" placeholder="Your phone or WhatsApp" />
+            </div>
+          </div>
+          <label for="contact-topic">Inquiry Type</label>
+          <select id="contact-topic" name="topic">
+            <option>General Inquiry</option>
+            <option>Provider Information</option>
+            <option>Platform Setup</option>
+            <option>Business Proposal</option>
+            <option>Free Test ID Request</option>
+          </select>
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Tell us what you need, which provider lineups you are interested in, and how we should contact you." required></textarea>
+          <button class="btn btn-primary" type="submit">Send Inquiry</button>
+          <div class="note">Replace the Formspree action URL with your actual form endpoint to receive submissions.</div>
+        </form>
+        <div class="contact-strip">
+          <a class="pill-link" href="https://t.me/yourtelegram" target="_blank" rel="noopener">Telegram</a>
+          <a class="pill-link" href="https://wa.me/1234567890" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="pill-link" href="mailto:contact@luckyonegames.com">Email</a>
+        </div>
+      </div>
 
-        <button type="submit">문의 보내기</button>
-      </form>
-      <p class="note">폼 액션 주소를 본인 Formspree 주소로 바꾸면 바로 동작합니다.</p>
+      <div class="card">
+        <h2 class="panel-title">Partner Application</h2>
+        <p class="panel-copy">Collect the applicant's name, contact details, region, preferred partnership type, and launch goals so you can review and follow up directly.</p>
+        <form action="https://formspree.io/f/your-partner-form-id" method="POST">
+          <div class="inline-two">
+            <div>
+              <label for="partner-name">Applicant Name</label>
+              <input id="partner-name" name="applicant_name" type="text" placeholder="Applicant full name" required />
+            </div>
+            <div>
+              <label for="partner-company">Business / Store Name</label>
+              <input id="partner-company" name="business_name" type="text" placeholder="Business, team, or store name" />
+            </div>
+          </div>
+          <div class="inline-two">
+            <div>
+              <label for="partner-email">Email</label>
+              <input id="partner-email" name="email" type="email" placeholder="Business email" required />
+            </div>
+            <div>
+              <label for="partner-contact">Phone / Telegram / WhatsApp</label>
+              <input id="partner-contact" name="contact" type="text" placeholder="Best contact method" required />
+            </div>
+          </div>
+          <div class="inline-two">
+            <div>
+              <label for="partner-country">Country / State</label>
+              <input id="partner-country" name="region" type="text" placeholder="Country, state, or target region" />
+            </div>
+            <div>
+              <label for="partner-type">Partnership Type</label>
+              <select id="partner-type" name="partnership_type" required>
+                <option value="">Select an option</option>
+                <option>Exclusive Platform</option>
+                <option>State Distributor</option>
+                <option>Store Account</option>
+              </select>
+            </div>
+          </div>
+          <label for="partner-message">Application Details</label>
+          <textarea id="partner-message" name="details" placeholder="Tell us about your business model, preferred providers, target market, and launch plan." required></textarea>
+          <div class="hero-actions" style="margin-top:14px;">
+            <a class="btn btn-secondary" href="https://t.me/yourtelegram" target="_blank" rel="noopener">Get Free Test ID</a>
+            <button class="btn btn-primary" type="submit">Apply for Partnership</button>
+          </div>
+          <div class="note">This form is designed so submissions can be sent directly to your email inbox through Formspree or a similar form service.</div>
+        </form>
+
+        <ul class="highlight-list">
+          <li><strong>Exclusive Platform:</strong> Launch with your own single-domain presentation and premium branding.</li>
+          <li><strong>State Distributor:</strong> Build a regional structure with scalable account expansion options.</li>
+          <li><strong>Store Account:</strong> Open business-ready accounts for offline store use and local operations.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <div class="wrap footer">
-    © 2026 Your Brand. All rights reserved.
+    © 2026 LuckyOne Gaming Solutions. Premium presentation, fast communication, and scalable partner support.
   </div>
 </body>
 </html>
