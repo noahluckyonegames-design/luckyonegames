@@ -1,942 +1,211 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online Casino Platform Provider | White Label Casino Solution</title>
-  <meta name="description" content="White label online casino platform with premium slot and live game providers. Start your own casino business with custom domain, distributor system, and fast setup." />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="Online Casino Platform Provider | White Label Casino Solution" />
-  <meta property="og:description" content="Launch your own premium gaming platform with top providers, custom domains, and scalable partner options." />
-  <meta property="og:type" content="website" />
-  <style>
-    :root {
-      --bg-1: #04060c;
-      --bg-2: #0a1222;
-      --bg-3: #070b14;
-      --card: rgba(13, 18, 33, 0.72);
-      --card-strong: rgba(15, 22, 40, 0.9);
-      --line: rgba(255,255,255,0.09);
-      --gold: #f7c96d;
-      --gold-2: #d49d38;
-      --text: #f6f7fb;
-      --muted: #a9b2c7;
-      --shadow: 0 24px 70px rgba(0,0,0,0.42);
-      --radius-xl: 30px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 14% 8%, rgba(247,201,109,0.16), transparent 24%),
-        radial-gradient(circle at 84% 12%, rgba(56,110,255,0.12), transparent 26%),
-        radial-gradient(circle at 50% 100%, rgba(247,201,109,0.08), transparent 26%),
-        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 46%, var(--bg-3) 100%);
-      min-height: 100vh;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-      background-size: 44px 44px;
-      opacity: 0.12;
-    }
-
-    .wrap {
-      max-width: 1260px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(18px);
-      background: rgba(5, 9, 17, 0.7);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 14px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      letter-spacing: 0.3px;
-    }
-
-    .brand-badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      color: #121212;
-      font-weight: 900;
-      background: linear-gradient(135deg, #ffe2a3, #b6781f);
-      box-shadow: 0 12px 28px rgba(247,201,109,0.22);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover { color: white; }
-
-    .cta-mini {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 0 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-      color: white;
-      text-decoration: none;
-    }
-
-    .hero {
-      padding: 74px 0 46px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .glass {
-      border-radius: var(--radius-xl);
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 36px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      right: -110px;
-      top: -110px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(247,201,109,0.26), transparent 62%);
-      filter: blur(12px);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #dde4f2;
-      font-size: 13px;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(40px, 6vw, 66px);
-      line-height: 1.03;
-      letter-spacing: -1.3px;
-    }
-
-    .gold { color: var(--gold); }
-
-    .lead {
-      max-width: 700px;
-      color: var(--muted);
-      font-size: 18px;
-      margin: 0 0 20px;
-    }
-
-    .urgency {
-      color: var(--gold);
-      font-weight: 800;
-      margin: 0 0 20px;
-      letter-spacing: 0.2px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .btn {
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 14px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-weight: 800;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #ffe2a3, var(--gold-2));
-      color: #121212;
-      box-shadow: 0 16px 40px rgba(212,157,56,0.28);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.12);
-      color: white;
-    }
-
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 26px;
-    }
-
-    .mini-stat {
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .mini-stat strong {
-      display: block;
-      font-size: 24px;
-      color: var(--gold);
-    }
-
-    .mini-stat span {
-      display: block;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .hero-visual {
-      padding: 22px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 70% 15%, rgba(247,201,109,0.16), transparent 28%),
-        linear-gradient(160deg, rgba(14,20,36,0.96), rgba(8,12,20,0.92));
-    }
-
-    .showcase-box {
-      min-height: 480px;
-      border-radius: 26px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
-        radial-gradient(circle at 50% 0%, rgba(247,201,109,0.08), transparent 30%),
-        #0a0f1b;
-      padding: 18px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-    }
-
-    .showcase-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 14px;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #d7dded;
-      font-size: 12px;
-    }
-
-    .provider-wall {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 16px;
-    }
-
-    .provider-tile {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      min-height: 132px;
-      background:
-        linear-gradient(180deg, rgba(17,24,39,0.92), rgba(8,12,20,0.96)),
-        radial-gradient(circle at top, rgba(247,201,109,0.1), transparent 34%);
-      border: 1px solid rgba(247,201,109,0.14);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-      transition: transform .2s ease, border-color .2s ease;
-    }
-
-    .provider-tile:hover {
-      transform: translateY(-4px);
-      border-color: rgba(247,201,109,0.28);
-    }
-
-    .provider-tile img {
-      width: 100%;
-      height: 132px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .provider-tile .fallback {
-      position: absolute;
-      inset: 0;
-      display: none;
-      place-items: center;
-      text-align: center;
-      padding: 14px;
-      font-weight: 800;
-      color: white;
-      background:
-        radial-gradient(circle at 50% 10%, rgba(247,201,109,0.18), transparent 30%),
-        linear-gradient(135deg, #14203a, #0b1220);
-    }
-
-    .provider-tile::after {
-      content: attr(data-name);
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      color: white;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8));
-    }
-
-    .section { padding: 18px 0 8px; }
-
-    .section-title {
-      margin: 0 0 10px;
-      font-size: 36px;
-      letter-spacing: -0.8px;
-      color: #fff6df;
-    }
-
-    .section-copy {
-      max-width: 900px;
-      margin: 0 0 26px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .feature-grid,
-    .contact-grid,
-    .form-grid,
-    .machine-showcase {
-      display: grid;
-      gap: 20px;
-    }
-
-    .feature-grid { grid-template-columns: repeat(3, 1fr); }
-    .contact-grid { grid-template-columns: repeat(4, 1fr); }
-    .form-grid { grid-template-columns: 1fr 1fr; align-items: start; }
-    .machine-showcase { grid-template-columns: .95fr 1.05fr; margin-top: 24px; }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-    }
-
-    .card p { margin: 0; color: var(--muted); font-size: 15px; }
-
-    .feature-icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, rgba(255,217,138,0.18), rgba(74,163,255,0.1));
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--gold);
-      font-weight: 900;
-      font-size: 22px;
-    }
-
-    .provider-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .provider-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 30px;
-      background:
-        linear-gradient(180deg, rgba(18, 24, 42, 0.96), rgba(7, 11, 20, 0.98)),
-        radial-gradient(circle at top, rgba(247,201,109,0.08), transparent 30%);
-      border: 1px solid rgba(247,201,109,0.16);
-      box-shadow: 0 22px 60px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.04);
-      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
-    }
-
-    .provider-card:hover {
-      transform: translateY(-8px) scale(1.01);
-      border-color: rgba(247,201,109,0.34);
-      box-shadow: 0 28px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(247,201,109,0.08) inset;
-    }
-
-    .provider-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      background: #121826;
-    }
-
-    .provider-card .fallback {
-      height: 180px;
-      display: none;
-      place-items: center;
-      text-align: center;
-      padding: 16px;
-      font-size: 22px;
-      font-weight: 900;
-      color: white;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(247,201,109,0.18), transparent 35%),
-        linear-gradient(135deg, #0d1426, #0a1020);
-    }
-
-    .provider-info { padding: 14px 16px 16px; }
-    .provider-info strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 4px;
-      font-weight: 800;
-      letter-spacing: 0.2px;
-      color: #fff7e7;
-    }
-    .provider-info span {
-      color: #aeb7cb;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .machine-copy p { color: var(--muted); }
-
-    .machine-media-grid,
-    .machine-video-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .machine-photo,
-    .machine-video {
-      position: relative;
-      overflow: hidden;
-      border-radius: 22px;
-      background:
-        linear-gradient(180deg, rgba(18, 24, 42, 0.96), rgba(7, 11, 20, 0.98)),
-        radial-gradient(circle at top, rgba(247,201,109,0.08), transparent 30%);
-      border: 1px solid rgba(247,201,109,0.14);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-      min-height: 220px;
-    }
-
-    .machine-photo img,
-    .machine-video video {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      background: #101827;
-    }
-
-    .machine-fallback,
-    .machine-video-fallback {
-      position: absolute;
-      inset: 0;
-      display: none;
-      place-items: center;
-      text-align: center;
-      font-weight: 800;
-      color: white;
-      background:
-        radial-gradient(circle at 50% 10%, rgba(247,201,109,0.18), transparent 30%),
-        linear-gradient(135deg, #14203a, #0b1220);
-    }
-
-    .machine-video-fallback { display: grid; pointer-events: none; }
-
-    .contact-card a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .panel-title { margin: 0 0 8px; font-size: 28px; }
-    .panel-copy { color: var(--muted); margin: 0 0 18px; }
-
-    label {
-      display: block;
-      margin: 12px 0 7px;
-      font-size: 14px;
-      color: #d9deeb;
-      font-weight: 700;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      background: rgba(255,255,255,0.05);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      padding: 14px 15px;
-      outline: none;
-      font-size: 15px;
-      transition: border-color .18s ease, box-shadow .18s ease;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-    }
-
-    select {
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
-      color: white;
-    }
-
-    select option {
-      background: #0f172a;
-      color: #ffffff;
-    }
-
-    select:focus option {
-      background: #0f172a;
-      color: #ffffff;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: rgba(247,201,109,0.5);
-      box-shadow: 0 0 0 4px rgba(247,201,109,0.09);
-    }
-
-    textarea { min-height: 130px; resize: vertical; }
-
-    .inline-two {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .contact-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .pill-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .highlight-list {
-      margin: 18px 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .highlight-list li {
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #dfe5f3;
-    }
-
-    .note {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 10px;
-    }
-
-    .footer {
-      padding: 32px 0 60px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 14px;
-    }
-
-    @media (max-width: 1100px) {
-      .hero-grid,
-      .feature-grid,
-      .contact-grid,
-      .form-grid,
-      .machine-showcase {
-        grid-template-columns: 1fr 1fr;
-      }
-      .provider-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 760px) {
-      .nav { flex-direction: column; align-items: flex-start; }
-      .hero-grid,
-      .feature-grid,
-      .contact-grid,
-      .form-grid,
-      .machine-showcase,
-      .provider-grid,
-      .provider-wall,
-      .hero-points,
-      .machine-media-grid,
-      .machine-video-grid,
-      .inline-two { grid-template-columns: 1fr; }
-      .hero-card, .hero-visual, .card { padding: 20px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Online Casino Platform Provider | White Label Casino Solution</title>
+
+<meta name="description" content="White label online casino platform with premium slot and live game providers.">
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+color:#fff;
+background:linear-gradient(180deg,#05070d,#0b1324);
+}
+
+.wrap{max-width:1200px;margin:auto;padding:20px;}
+
+h1{font-size:44px;}
+.gold{color:#f7c96d;}
+
+.btn{
+padding:12px 18px;
+border-radius:10px;
+text-decoration:none;
+display:inline-block;
+margin:5px;
+font-weight:700;
+}
+
+.btn-primary{
+background:#f7c96d;
+color:#000;
+}
+
+.btn-secondary{
+background:#222;
+color:#fff;
+}
+
+.provider-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.provider-card{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+}
+
+.provider-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.provider-info{padding:10px;}
+
+.machine-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.machine-grid img, video{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+}
+
+input, select, textarea{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border-radius:10px;
+border:none;
+}
+
+@media(max-width:768px){
+.provider-grid,.machine-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="brand-badge">L</div>
-        <div>LuckyOne Gaming Solutions</div>
-      </div>
-      <div class="nav-links">
-        <a href="#providers">Providers</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#contact">Contact</a>
-        <a href="#partner">Partner Program</a>
-        <a class="cta-mini" href="#partner">Apply Now</a>
-      </div>
-    </div>
-  </div>
 
-  <div class="wrap hero">
-    <div class="hero-grid">
-      <div class="glass hero-card">
-        <div class="eyebrow">Premium Casino & Slot Platform Solutions</div>
-        <h1>Start Your Own <span class="gold">Online Casino Platform</span> with premium providers, fast setup, and scalable partner options.</h1>
-        <p class="urgency">Limited distributor spots available</p>
-        <p class="lead">White label casino solution with top game providers, custom domain setup, distributor opportunities, store account access, and premium presentation for serious business partners.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#partner">Start Your Platform Now</a>
-          <a class="btn btn-secondary" href="#contact">Contact Sales</a>
-          <a class="btn btn-secondary" href="https://t.me/luckyone_support" target="_blank" rel="noopener">Get Free Demo Account</a>
-        </div>
-        <div class="hero-points">
-          <div class="mini-stat"><strong>10+</strong><span>Premium providers</span></div>
-          <div class="mini-stat"><strong>Custom</strong><span>Single-domain setup</span></div>
-          <div class="mini-stat"><strong>24/7</strong><span>Partner support</span></div>
-        </div>
-      </div>
+<div class="wrap">
 
-      <div class="glass hero-visual">
-        <div class="showcase-box">
-          <div class="showcase-head">
-            <div>
-              <strong style="font-size:20px; display:block; margin-bottom:4px;">Premium Provider Showcase</strong>
-              <span style="color:var(--muted); font-size:14px;">Luxury presentation with automatic image fallback.</span>
-            </div>
-            <div class="chip">Luxury UI · Premium Look</div>
-          </div>
-          <div class="provider-wall">
-            <div class="provider-tile" data-name="Evolution"><img src="images/evolution.jpg" alt="Evolution" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Evolution</div></div>
-            <div class="provider-tile" data-name="Dream Gaming"><img src="images/dreamgaming.jpg" alt="Dream Gaming" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Dream Gaming</div></div>
-            <div class="provider-tile" data-name="Microgaming"><img src="images/microgaming.jpg" alt="Microgaming" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Microgaming</div></div>
-            <div class="provider-tile" data-name="Pragmatic Play"><img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Pragmatic Play</div></div>
-            <div class="provider-tile" data-name="CQ9"><img src="images/cq9.jpg" alt="CQ9" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">CQ9</div></div>
-            <div class="provider-tile" data-name="Booongo"><img src="images/booongo.jpg" alt="Booongo" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Booongo</div></div>
-            <div class="provider-tile" data-name="Playson"><img src="images/playson.jpg" alt="Playson" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Playson</div></div>
-            <div class="provider-tile" data-name="Habanero"><img src="images/habanero.jpg" alt="Habanero" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Habanero</div></div>
-            <div class="provider-tile" data-name="PG Soft"><img src="images/pgsoft.jpg" alt="PG Soft" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">PG Soft</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<h1>
+Start Your Own <span class="gold">Online Casino Platform</span>
+</h1>
 
-  <div class="wrap section" id="solutions">
-    <h2 class="section-title">What We Provide</h2>
-    <p class="section-copy">Our solutions are built for partners who want premium presentation, major provider access, flexible account structures, and a fast path to launch. In addition to platform setup, we can also help create custom gaming machines powered by online game platform integration for store and offline use cases.</p>
+<p style="color:#f7c96d;font-weight:700;">
+Limited distributor spots available
+</p>
 
-    <div class="feature-grid">
-      <div class="card">
-        <div class="feature-icon">01</div>
-        <h3>All-in-One Provider Access</h3>
-        <p>Use a wide range of premium casino and slot content from major providers through one streamlined setup.</p>
-      </div>
-      <div class="card">
-        <div class="feature-icon">02</div>
-        <h3>Single-Domain Branding</h3>
-        <p>Operate with your own dedicated domain for a cleaner identity, stronger presentation, and a more premium customer experience.</p>
-      </div>
-      <div class="card">
-        <div class="feature-icon">03</div>
-        <h3>Distributor & Store Accounts</h3>
-        <p>Open accounts for regional distributors or offline store use cases with scalable expansion options.</p>
-      </div>
-    </div>
+<p>
+White label casino solution with premium providers,
+custom domain setup and distributor system.
+</p>
 
-    <div class="machine-showcase">
-      <div class="card machine-copy">
-        <div class="feature-icon">04</div>
-        <h3>Custom Gaming Machine Production</h3>
-        <p>We can also build custom machines powered by online gaming platform integration. This is ideal for partners looking to combine premium game content, branded presentation, and physical machine setup for store environments or business expansion.</p>
-        <ul class="highlight-list">
-          <li><strong>Custom cabinet setup:</strong> machine design can be matched to your business concept and branding style.</li>
-          <li><strong>Platform integration:</strong> connect supported game lineups into a cleaner machine-based presentation.</li>
-          <li><strong>Store-ready use:</strong> suitable for distributor models, offline store deployment, and multi-location expansion planning.</li>
-        </ul>
-      </div>
+<div>
+<a class="btn btn-primary" href="#partner">Start Your Platform</a>
+<a class="btn btn-secondary" href="https://t.me/luckyone_support" target="_blank">
+Get Free Demo Account
+</a>
+</div>
 
-      <div class="card">
-        <h3 style="margin-top:0;">Machine Photo & Video Showcase</h3>
-        <p class="panel-copy">Upload your own example machine photos and videos to highlight your custom build options.</p>
-        <div class="machine-media-grid">
-          <div class="machine-photo">
-            <img src="media/machine-photo-1.jpg" alt="Custom machine example 1" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="machine-fallback">Machine Photo 1</div>
-          </div>
-          <div class="machine-photo">
-            <img src="media/machine-photo-2.jpg" alt="Custom machine example 2" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-            <div class="machine-fallback">Machine Photo 2</div>
-          </div>
-        </div>
-        <div class="machine-video-grid">
-          <div class="machine-video">
-            <video controls preload="metadata" poster="media/video-poster-1.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-              <source src="media/machine-video-1.mp4" type="video/mp4">
-            </video>
-            <div class="machine-video-fallback">Machine Demo Video 1</div>
-          </div>
-          <div class="machine-video">
-            <video controls preload="metadata" poster="media/video-poster-2.jpg" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-              <source src="media/machine-video-2.mp4" type="video/mp4">
-            </video>
-            <div class="machine-video-fallback">Machine Demo Video 2</div>
-          </div>
-        </div>
-        <div class="note">Upload your files into a <strong>media</strong> folder in GitHub using the file names shown above.</div>
-      </div>
-    </div>
-  </div>
+<hr>
 
-  <div class="wrap section" id="providers">
-    <h2 class="section-title">Featured Game Providers</h2>
-    <p class="section-copy">Premium card layout with live image loading. When an image file exists in the <strong>images</strong> folder, the real artwork is shown automatically. If not, the fallback card is displayed instead.</p>
-    <div class="provider-grid">
-      <div class="provider-card"><img src="images/evolution.jpg" alt="Evolution" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Evolution</div><div class="provider-info"><strong>Evolution</strong><span>Live casino and premium table content</span></div></div>
-      <div class="provider-card"><img src="images/dreamgaming.jpg" alt="Dream Gaming" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Dream Gaming</div><div class="provider-info"><strong>Dream Gaming</strong><span>Live dealer content and immersive table experience</span></div></div>
-      <div class="provider-card"><img src="images/microgaming.jpg" alt="Microgaming" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Microgaming</div><div class="provider-info"><strong>Microgaming</strong><span>Well-known casino library and classic titles</span></div></div>
-      <div class="provider-card"><img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Pragmatic Play</div><div class="provider-info"><strong>Pragmatic Play</strong><span>Popular slot and live content lineup</span></div></div>
-      <div class="provider-card"><img src="images/cq9.jpg" alt="CQ9" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">CQ9</div><div class="provider-info"><strong>CQ9</strong><span>High-appeal slot portfolio and themed content</span></div></div>
-      <div class="provider-card"><img src="images/booongo.jpg" alt="Booongo" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Booongo</div><div class="provider-info"><strong>Booongo</strong><span>Modern slot content and mobile-friendly titles</span></div></div>
-      <div class="provider-card"><img src="images/playson.jpg" alt="Playson" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Playson</div><div class="provider-info"><strong>Playson</strong><span>Recognizable slots with strong visual style</span></div></div>
-      <div class="provider-card"><img src="images/habanero.jpg" alt="Habanero" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">Habanero</div><div class="provider-info"><strong>Habanero</strong><span>Fast-loading slot content and broad themes</span></div></div>
-      <div class="provider-card"><img src="images/pgsoft.jpg" alt="PG Soft" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="fallback">PG Soft</div><div class="provider-info"><strong>PG Soft</strong><span>Mobile-first premium game presentation</span></div></div>
-    </div>
-  </div>
+<h2>Featured Game Providers</h2>
 
-  <div class="wrap section" id="contact">
-    <h2 class="section-title">Direct Contact Channels</h2>
-    <p class="section-copy">Contact us directly to get your demo account, pricing details, and full platform setup information.</p>
-    <div class="contact-grid">
-      <div class="card contact-card">
-        <h3>Telegram</h3>
-        <a class="btn btn-secondary" href="https://t.me/luckyone_support" target="_blank" rel="noopener">Contact via Telegram</a>
-        <p style="margin-top:12px;">Best for fast response and demo account requests.</p>
-      </div>
-      <div class="card contact-card">
-        <h3>WhatsApp</h3>
-        <a class="btn btn-secondary" href="https://wa.me/14704626168?text=Hello%20I%20want%20to%20start%20casino%20platform" target="_blank" rel="noopener">Contact via WhatsApp</a>
-        <p style="margin-top:12px;">Quick communication for business discussion.</p>
-      </div>
-      <div class="card contact-card">
-        <h3>Email</h3>
-        <a class="btn btn-secondary" href="mailto:noah.luckyonegames@gmail.com">Contact via Email</a>
-        <p style="margin-top:12px;">For proposals, documents, and detailed requests.</p>
-      </div>
-      <div class="card contact-card">
-        <h3>Free Demo</h3>
-        <a class="btn btn-primary" href="https://t.me/luckyone_support" target="_blank" rel="noopener">Get Free Demo Account</a>
-        <p style="margin-top:12px;">Start with a quick account request and move into setup discussion.</p>
-      </div>
-    </div>
-  </div>
+<div class="provider-grid">
 
-  <div class="wrap section" id="partner">
-    <div class="form-grid">
-      <div class="card">
-        <h2 class="panel-title">Contact Form</h2>
-        <p class="panel-copy">Use this section for general inquiry, provider information requests, and setup consultation.</p>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-          <div class="inline-two">
-            <div>
-              <label for="contact-name">Full Name</label>
-              <input id="contact-name" name="name" type="text" placeholder="Enter your full name" required />
-            </div>
-            <div>
-              <label for="contact-company">Company / Brand</label>
-              <input id="contact-company" name="company" type="text" placeholder="Your company or brand" />
-            </div>
-          </div>
-          <div class="inline-two">
-            <div>
-              <label for="contact-email">Email</label>
-              <input id="contact-email" name="email" type="email" placeholder="you@example.com" required />
-            </div>
-            <div>
-              <label for="contact-phone">Phone / WhatsApp</label>
-              <input id="contact-phone" name="phone" type="text" placeholder="Your phone or WhatsApp" />
-            </div>
-          </div>
-          <label for="contact-topic">Inquiry Type</label>
-          <select id="contact-topic" name="topic">
-            <option>General Inquiry</option>
-            <option>Provider Information</option>
-            <option>Platform Setup</option>
-            <option>Business Proposal</option>
-            <option>Free Demo Account Request</option>
-          </select>
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" placeholder="Tell us what you need, which provider lineups you are interested in, and how we should contact you." required></textarea>
-          <button class="btn btn-primary" type="submit">Send Inquiry</button>
-          <div class="note">Replace the Formspree action URL with your actual form endpoint to receive submissions.</div>
-        </form>
-        <div class="contact-strip">
-          <a class="pill-link" href="https://t.me/luckyone_support" target="_blank" rel="noopener">Telegram</a>
-          <a class="pill-link" href="https://wa.me/14704626168?text=Hello%20I%20want%20to%20start%20casino%20platform" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="pill-link" href="mailto:noah.luckyonegames@gmail.com">Email</a>
-        </div>
-      </div>
+<div class="provider-card">
+<img src="images/evolution.jpg">
+<div class="provider-info">Evolution</div>
+</div>
 
-      <div class="card">
-        <h2 class="panel-title">Partner Application</h2>
-        <p class="panel-copy">Collect the applicant's name, contact details, region, preferred partnership type, and launch goals so you can review and follow up directly.</p>
-        <form action="https://formspree.io/f/your-partner-form-id" method="POST">
-          <div class="inline-two">
-            <div>
-              <label for="partner-name">Applicant Name</label>
-              <input id="partner-name" name="applicant_name" type="text" placeholder="Applicant full name" required />
-            </div>
-            <div>
-              <label for="partner-company">Business / Store Name</label>
-              <input id="partner-company" name="business_name" type="text" placeholder="Business, team, or store name" />
-            </div>
-          </div>
-          <div class="inline-two">
-            <div>
-              <label for="partner-email">Email</label>
-              <input id="partner-email" name="email" type="email" placeholder="Business email" required />
-            </div>
-            <div>
-              <label for="partner-contact">Phone / Telegram / WhatsApp</label>
-              <input id="partner-contact" name="contact" type="text" placeholder="Best contact method" required />
-            </div>
-          </div>
-          <div class="inline-two">
-            <div>
-              <label for="partner-country">Country / State</label>
-              <input id="partner-country" name="region" type="text" placeholder="Country, state, or target region" />
-            </div>
-            <div>
-              <label for="partner-type">Partnership Type</label>
-              <select id="partner-type" name="partnership_type" required>
-                <option value="">Select an option</option>
-                <option>Exclusive Platform</option>
-                <option>State Distributor</option>
-                <option>Store Account</option>
-              </select>
-            </div>
-          </div>
-          <label for="partner-message">Application Details</label>
-          <textarea id="partner-message" name="details" placeholder="Tell us about your business model, preferred providers, target market, and launch plan." required></textarea>
-          <div class="hero-actions" style="margin-top:14px;">
-            <a class="btn btn-secondary" href="https://t.me/luckyone_support" target="_blank" rel="noopener">Get Free Demo Account</a>
-            <button class="btn btn-primary" type="submit">Apply & Start Business</button>
-          </div>
-          <div class="note">This form is designed so submissions can be sent directly to your email inbox through Formspree or a similar form service.</div>
-        </form>
-        <ul class="highlight-list">
-          <li><strong>Exclusive Platform:</strong> Launch with your own single-domain presentation and premium branding.</li>
-          <li><strong>State Distributor:</strong> Build a regional structure with scalable account expansion options.</li>
-          <li><strong>Store Account:</strong> Open business-ready accounts for offline store use and local operations.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="provider-card">
+<img src="images/pragmaticplay.jpg">
+<div class="provider-info">Pragmatic Play</div>
+</div>
 
-  <div class="wrap footer">© 2026 LuckyOne Gaming Solutions. Premium presentation, fast communication, and scalable partner support.</div>
+<div class="provider-card">
+<img src="images/dreamgaming.jpg">
+<div class="provider-info">Dream Gaming</div>
+</div>
+
+<div class="provider-card">
+<img src="images/cq9.jpg">
+<div class="provider-info">CQ9</div>
+</div>
+
+<div class="provider-card">
+<img src="images/pgsoft.jpg">
+<div class="provider-info">PG Soft</div>
+</div>
+
+</div>
+
+<hr>
+
+<h2>Custom Gaming Machine</h2>
+
+<p>
+We build custom machines powered by online gaming platforms.
+</p>
+
+<div class="machine-grid">
+
+<img src="media/machine-photo-1.jpg">
+<img src="media/machine-photo-2.jpg">
+
+<video controls>
+<source src="media/machine-video-1.mp4">
+</video>
+
+<video controls>
+<source src="media/machine-video-2.mp4">
+</video>
+
+</div>
+
+<hr>
+
+<h2>Contact</h2>
+
+<a class="btn btn-secondary" href="https://t.me/luckyone_support" target="_blank">
+Contact via Telegram
+</a>
+
+<a class="btn btn-secondary" href="mailto:noah.luckyonegames@gmail.com">
+Contact via Email
+</a>
+
+<hr>
+
+<h2 id="partner">Partner Application</h2>
+
+<form action="https://formspree.io/f/mdawqqqp" method="POST">
+
+<input type="hidden" name="_next" value="https://luckyonegames.com">
+<input type="text" name="_gotcha" style="display:none">
+
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email" required>
+
+<select name="type">
+<option>Exclusive Platform</option>
+<option>Distributor</option>
+<option>Store Account</option>
+</select>
+
+<textarea name="message" placeholder="Your plan"></textarea>
+
+<button class="btn btn-primary" type="submit">
+Apply & Start Business
+</button>
+
+</form>
+
+</div>
+
 </body>
 </html>
