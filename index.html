@@ -6,7 +6,7 @@
   <title>Enterprise Gaming Platform Software | B2B Integration & Partner Solutions</title>
   <meta
     name="description"
-    content="B2B gaming platform software for licensed operators, distributors, and field partners. Integration, content aggregation, branded deployment, and partner enablement. No direct player services."
+    content="B2B gaming platform software for licensed operators, distributors, and field partners. Integration, branded deployment, and partner enablement. No direct player services."
   />
   <meta name="robots" content="index,follow" />
   <meta property="og:title" content="Enterprise Gaming Platform Software | B2B Integration & Partner Solutions" />
@@ -548,8 +548,11 @@
         <p class="panel-copy">Use this form for B2B inquiries, supplier discussions, field partner applications, and integration planning.</p>
 
         <form action="https://formspree.io/f/mdawqqqp" method="POST">
-          <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
+          <input type="hidden" name="_next" value="/thank-you.html">
           <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="New B2B Inquiry - LuckyOne">
+          <input type="hidden" name="_autoresponse" value="Thank you. Your request has been received. Our team will contact you shortly.">
+          <input type="hidden" name="_template" value="table">
 
           <div class="inline-two">
             <div>
@@ -569,7 +572,7 @@
             </div>
             <div>
               <label for="contact-phone">Telegram / Contact</label>
-              <input id="contact-phone" name="phone" type="text" placeholder="Telegram ID or best contact">
+              <input id="contact-phone" name="contact" type="text" placeholder="Telegram ID or best contact">
             </div>
           </div>
 
@@ -584,7 +587,7 @@
           </select>
 
           <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" placeholder="Tell us your target market, business role, licensing status if applicable, and partnership interest." required></textarea>
+          <textarea id="contact-message" name="message" placeholder="Tell us your target region, business role, and partnership interest." required></textarea>
 
           <button class="btn btn-primary" type="submit">Send Inquiry</button>
           <div class="note">For business use only. Consumer/player inquiries are not accepted.</div>
@@ -600,7 +603,63 @@
         <h2 class="panel-title">Partner Application</h2>
         <p class="panel-copy">For licensed operators, regional distributors, state suppliers, and approved offline field agents.</p>
 
-      <form action="https://formspree.io/f/mdawqqqp" method="POST">
+        <form action="https://formspree.io/f/mdawqqqp" method="POST">
+          <input type="hidden" name="_next" value="/thank-you.html">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="New Partner Application - LuckyOne">
+          <input type="hidden" name="_autoresponse" value="Thank you. Your application has been received. Our team will review it and contact you shortly.">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="inline-two">
+            <div>
+              <label for="partner-name">Applicant Name</label>
+              <input id="partner-name" name="applicant_name" type="text" placeholder="Applicant full name" required>
+            </div>
+            <div>
+              <label for="partner-company">Business / Team Name</label>
+              <input id="partner-company" name="business_name" type="text" placeholder="Business, supplier group, or team name">
+            </div>
+          </div>
+
+          <div class="inline-two">
+            <div>
+              <label for="partner-email">Email</label>
+              <input id="partner-email" name="email" type="email" placeholder="Business email" required>
+            </div>
+            <div>
+              <label for="partner-contact">Phone / Telegram</label>
+              <input id="partner-contact" name="contact" type="text" placeholder="Best contact method" required>
+            </div>
+          </div>
+
+          <div class="inline-two">
+            <div>
+              <label for="partner-country">Country / State / Region</label>
+              <input id="partner-country" name="region" type="text" placeholder="Country, state, or target region">
+            </div>
+            <div>
+              <label for="partner-type">Partnership Type</label>
+              <select id="partner-type" name="partnership_type" required>
+                <option value="">Select an option</option>
+                <option>Licensed Operator</option>
+                <option>Regional Distributor</option>
+                <option>State Supplier</option>
+                <option>Offline Field Agent</option>
+                <option>Venue / Store Partner</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="partner-message">Application Details</label>
+          <textarea id="partner-message" name="details" placeholder="Describe your business role, target area, licensing position if applicable, and rollout plan." required></textarea>
+
+          <div class="hero-actions" style="margin-top:14px;">
+            <a class="btn btn-secondary" href="https://t.me/luckyone_support" target="_blank" rel="noopener">Request Demo Review</a>
+            <button class="btn btn-primary" type="submit">Apply for Partnership</button>
+          </div>
+
+          <div class="note">Submission does not guarantee approval. All partnerships are subject to internal review, jurisdiction, law, and contract scope.</div>
+        </form>
 
         <ul class="highlight-list">
           <li><strong>Licensed Operator:</strong> Business-facing platform presentation and integration review.</li>
@@ -622,9 +681,7 @@
         <li><strong>Responsible controls:</strong> Where required by law or contract, operators remain responsible for implementing all applicable controls, including age restrictions, verification, geo-controls, AML/KYC measures, and responsible-use safeguards.</li>
       </ul>
       <p class="note">
-        All partners are solely responsible for their marketing, advertising, and operational practices.
-Any use of this platform must comply with applicable laws, platform policies, and local regulations.
-Unauthorized or non-compliant use is strictly prohibited.
+        All partners are solely responsible for their marketing, advertising, and operational practices. Any use of this platform must comply with applicable laws, platform policies, and local regulations.
       </p>
     </div>
   </div>
