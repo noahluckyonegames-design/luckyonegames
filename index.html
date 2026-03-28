@@ -63,4 +63,101 @@
     /* Modal Style */
     .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.96); backdrop-filter:blur(8px); }
     .modal-content { margin:4% auto; display:block; width:92%; max-width:1150px; border-radius:20px; border:2px solid var(--gold); }
-    .modal-close { position:absolute; top:30
+    .modal-close { position:absolute; top:30px; right:50px; color:#fff; font-size:50px; font-weight:bold; cursor:pointer; }
+
+    @media (max-width:768px){ .hero-grid{grid-template-columns:1fr;} .modal-content{width:98%; margin:25% auto;} }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="brand-badge">L</div>
+      <span>LuckyOne Gaming Solutions</span>
+    </div>
+    <a href="#apply" class="btn-primary" style="padding:10px 25px; font-size:14px; text-decoration:none; border-radius:50px;">Partner Inquiry</a>
+  </div>
+</div>
+
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">B2B Territory Access 2026</span>
+      <h1>Enterprise Sweepstakes Solutions for US Suppliers</h1>
+      <p class="lead">
+        We provide high-revenue <strong>Online Gaming Platforms</strong> for professional agents and regional distributors. Built for Texas, Florida, and key US markets.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="#apply" class="btn btn-primary">Request Territory Demo</a>
+      </div>
+
+      <div class="status-box">
+        <strong>🔥 Expansion Notice:</strong> Now accepting partners in <strong>Texas, Florida, Arizona, North/South Carolina.</strong> Slots are strictly limited per state.
+      </div>
+    </div>
+
+    <div class="hero-visual" onclick="openModal('https://luckyonegames.com/images/sample.jpg')">
+      <img src="https://luckyonegames.com/images/sample.jpg" alt="Evolution Content Preview" onerror="this.src='https://via.placeholder.com/600x400/091223/f7c96d?text=High-Performance+Gaming+Preview';">
+      <div class="visual-overlay">🔍 Click to View Live Demo Preview</div>
+    </div>
+  </div>
+</div>
+
+<div id="apply" class="wrap form-section">
+  <div class="form-container">
+    <h3>Apply for Partnership</h3>
+    <p style="color:var(--muted); font-size:15px; margin-bottom:35px;">Submit your business details to receive our B2B kit and exclusive high-payout structures.</p>
+    
+    <form action="https://formspree.io/f/mdawqqqp" method="POST" id="contact-form">
+      <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+        <input type="text" name="name" placeholder="Full Contact Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
+      </div>
+      
+      <select name="state" required>
+        <option value="">Select Your State</option>
+        <option value="Texas">Texas</option>
+        <option value="Florida">Florida</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Carolinas">North/South Carolina</option>
+        <option value="Other">Other US States</option>
+      </select>
+      
+      <textarea name="message" placeholder="Tell us about your distribution network or current gaming operations... (Optional)"></textarea>
+      
+      <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px; margin-top:10px;">
+        Submit Inquiry & Get Demo Access
+      </button>
+    </form>
+    <p style="text-align:center; font-size:12px; color:var(--muted); margin-top:20px;">*B2B only. Direct player inquiries will be ignored.</p>
+  </div>
+</div>
+
+<div class="footer wrap" style="padding:60px 0; text-align:center; color:var(--muted); font-size:14px; border-top:1px solid var(--line);">
+  <p>&copy; 2026 LuckyOne Gaming Solutions. Professional B2B Software Provider. All Rights Reserved.</p>
+</div>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  function openModal(imgSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+  }
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
