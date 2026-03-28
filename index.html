@@ -11,7 +11,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite B2B Gaming Platform | US State Partnership Solutions</title>
+  <title>LuckyOne B2B | Premium Gaming Platforms for US Regional Suppliers</title>
   
   <style>
     :root{
@@ -33,30 +33,41 @@
     .brand{display:flex; align-items:center; gap:10px; font-weight:900; font-size:20px;}
     .brand-badge{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, #ffe2a3, #b6781f); display:grid; place-items:center; color:#111;}
     
-    .hero{padding:80px 0 60px;}
+    .hero{padding:100px 0 80px;}
     .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
     .eyebrow{color:var(--gold); font-weight:bold; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:15px; display:block;}
-    h1{font-size:clamp(32px, 5vw, 56px); line-height:1.1; margin:0 0 20px; letter-spacing:-1px;}
-    .lead{font-size:18px; color:var(--muted); margin-bottom:30px;}
+    h1{font-size:clamp(36px, 5vw, 60px); line-height:1.1; margin:0 0 25px; letter-spacing:-1.5px;}
+    .lead{font-size:20px; color:var(--muted); margin-bottom:40px;}
     
     .btn{padding:18px 35px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-block; transition:0.3s; font-size:16px; border:none; cursor:pointer;}
     .btn-primary{background:linear-gradient(135deg, #ffe2a3, var(--gold-2)); color:#111; box-shadow:0 10px 30px rgba(212,157,56,0.3);}
     
-    .hero-visual img{width:100%; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,0.5); display:block; aspect-ratio:16/10; object-fit:cover;}
+    .hero-visual img{width:100%; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,0.6); display:block; aspect-ratio:16/10; object-fit:cover;}
 
-    .partners-section{padding:60px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:60px 0;}
-    .partners-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:30px; align-items:center; text-align:center;}
-    .partners-grid img{max-width:130px; height:auto; opacity:0.8; transition:0.3s; filter: brightness(1.2);}
-    .partners-grid img:hover{opacity:1; transform: scale(1.05);}
+    .status-box{margin-top:50px; padding:25px; background:rgba(247,201,109,0.07); border-radius:20px; border:1px solid rgba(247,201,109,0.2); border-left:5px solid var(--gold);}
+    .status-box strong{color:var(--gold); display:block; margin-bottom:5px;}
 
-    .card{background:var(--card); padding:30px; border-radius:var(--radius-lg); border:1px solid var(--line); margin-bottom:20px;}
-    .card h3{color:var(--gold); margin-top:0;}
+    .solutions-section{padding:80px 0; border-top:1px solid var(--line);}
+    .solutions-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; margin-top:50px;}
+    .card{background:var(--card); padding:40px; border-radius:var(--radius-lg); border:1px solid var(--line); transition:0.3s;}
+    .card:hover{border-color:rgba(247,201,109,0.3); transform:translateY(-5px);}
+    .card h3{color:var(--gold); margin-top:0; margin-bottom:15px; font-size:24px;}
+    .card p{color:var(--muted); margin:0; font-size:16px;}
 
-    .form-container{background:var(--card); padding:40px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 30px 60px rgba(0,0,0,0.5); max-width:800px; margin:50px auto;}
-    input, select, textarea {
-      width:100%; padding:15px; margin-bottom:15px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,0.3); color:#fff; font-size:15px;
-    }
-    textarea{height:100px;}
+    .machine-section{padding:80px 0; border-top:1px solid var(--line); background:rgba(0,0,0,0.2);}
+    .machine-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;}
+    .machine-media{display:grid; grid-template-columns:1fr; gap:20px;}
+    .media-card{position:relative; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line); box-shadow:0 20px 50px rgba(0,0,0,0.4);}
+    .media-card img, .media-card video{width:100%; display:block; object-fit:cover;}
+
+    .highlight-list{list-style:none; padding:0; margin:30px 0;}
+    .highlight-list li{margin-bottom:15px; padding-left:30px; position:relative; color:var(--muted); font-size:16px;}
+    .highlight-list li::before{content:"✓"; color:var(--gold); position:absolute; left:0; font-weight:bold;}
+
+    .form-container{background:var(--card); padding:50px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 40px 80px rgba(0,0,0,0.6); max-width:850px; margin:50px auto; text-align:center;}
+    input, select, textarea { width:100%; padding:18px; margin-bottom:18px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,0.4); color:#fff; font-size:16px; }
+
+    @media (max-width:900px){ .hero-grid, .machine-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
@@ -64,56 +75,57 @@
 <div class="topbar">
   <div class="wrap nav">
     <div class="brand"><div class="brand-badge">L</div><span>LuckyOne Gaming Solutions</span></div>
-    <a href="#apply" class="btn-primary" style="padding:10px 20px; font-size:14px; text-decoration:none; border-radius:50px;">Apply Now</a>
+    <a href="#apply" class="btn-primary" style="padding:10px 25px; font-size:14px; text-decoration:none; border-radius:50px;">Partner Inquiry</a>
   </div>
 </div>
 
 <div class="wrap hero">
   <div class="hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">Enterprise B2B Partnership</span>
-      <h1>Dominant Sweepstakes Platforms for US Suppliers</h1>
-      <p class="lead">World-class gaming solutions for state-level agents and regional distributors. Reliable, secure, and high-margin.</p>
+      <span class="eyebrow">Premium B2B Partnership 2026</span>
+      <h1>Elite Sweepstakes Platforms for US State Suppliers</h1>
+      <p class="lead">From High-End Mobile & PC to **Custom Machine Cabinets.** We offer world-class gaming content with industry-leading RTP standards for professional agents.</p>
       <a href="#apply" class="btn btn-primary">Request Territory Access</a>
+      <div class="status-box"><strong>🔥 Active Expansion:</strong> Texas, Florida, Arizona, Carolinas. Dominant your market with verified global content.</div>
     </div>
-    <div class="hero-visual">
-      <img src="images/sample.jpg" alt="Showcase" onerror="this.src='https://via.placeholder.com/600x400?text=Gaming+Showcase';">
+    <div class="hero-visual"><img src="images/sample.jpg" alt="LuckyOne Showcase"></div>
+  </div>
+</div>
+
+<div class="wrap solutions-section">
+  <h2 style="text-align:center; color:#fff; margin-bottom:50px; font-size:36px;">Why Leading Agents Choose LuckyOne</h2>
+  <div class="solutions-grid">
+    <div class="card">
+      <h3>Tier-1 Global RTP</h3>
+      <p>As a global partner of **Evolution, Pragmatic Play, and PG Soft,** we provide content with industry-leading RTP. Proven fairness and high payout rates ensure maximum player retention.</p>
+    </div>
+    <div class="card">
+      <h3>Premium Product Quality</h3>
+      <p>Don't settle for low-quality clones. Our platform delivers authentic, high-definition gaming experiences that build trust with your local player base.</p>
+    </div>
+    <div class="card">
+      <h3>Agent-Led Compliance</h3>
+      <p>Flexible platform architecture empowers regional suppliers to manage operations according to specific state guidelines in TX, FL, and beyond.</p>
     </div>
   </div>
 </div>
 
-<div class="partners-section wrap">
-  <h2 style="text-align:center; color:#fff; margin-bottom:40px; font-size:24px;">Our Integration Partners</h2>
-  <div class="partners-grid">
-    <img src="images/evolution.jpg" alt="Evolution">
-    <img src="images/pragmaticplay.jpg" alt="Pragmatic Play">
-    <img src="images/microgaming.jpg" alt="Microgaming">
-    <img src="images/pgsoft.jpg" alt="PG Soft">
-    <img src="images/cq9.jpg" alt="CQ9">
-    <img src="images/dreamgaming.jpg" alt="Dream Gaming">
-    <img src="images/habanero.jpg" alt="Habanero">
-    <img src="images/playson.jpg" alt="Playson">
-    <img src="images/booongo.jpg" alt="Booongo">
-  </div>
-</div>
-
-<div id="apply" class="wrap form-container">
-  <h3>Territory Access Inquiry</h3>
-  <form action="https://formspree.io/f/mdawqqqp" method="POST">
-    <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Business Email" required>
-    <select name="state" required>
-      <option value="">Target State</option>
-      <option value="Texas">Texas</option>
-      <option value="Florida">Florida</option>
-      <option value="Arizona">Arizona</option>
-      <option value="Carolinas">North/South Carolina</option>
-    </select>
-    <textarea name="message" placeholder="Describe your network..." required></textarea>
-    <button type="submit" class="btn btn-primary" style="width:100%;">Get Demo Access</button>
-  </form>
-</div>
-
-</body>
-</html>
+<div class="machine-section">
+  <div class="wrap machine-grid">
+    <div class="machine-media">
+      <div class="media-card">
+        <video controls preload="metadata" poster="media/video-poster-1.jpg">
+          <source src="media/machine-video-1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+        <div class="media-card"><img src="media/machine-photo-1.jpg" alt="Machine Photo 1"></div>
+        <div class="media-card"><img src="media/machine-photo-2.jpg" alt="Machine Photo 2"></div>
+      </div>
+    </div>
+    <div class="machine-info">
+      <span class="eyebrow">Physical Deployment Ready</span>
+      <h2>Beyond Mobile: Custom Machine Cabinets</h2>
+      <p class="lead">LuckyOne provides **customizable machine-style cabinets.** Ideal for physical venues, sweepstakes cafes, and professional field operations.</p>
+      <ul class="highlight-list">
+        <li><strong>Venue-Aware:</strong> High-durability cabinets
