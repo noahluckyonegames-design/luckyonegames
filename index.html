@@ -12,7 +12,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-18041424138');
   </script>
 
@@ -28,8 +27,6 @@
       --gold-2:#d49d38;
       --text:#f6f7fb;
       --muted:#aab3c7;
-      --success:#9fe29f;
-      --warning:#ffd27a;
       --radius-xl:30px;
       --radius-lg:24px;
       --radius-md:18px;
@@ -723,7 +720,6 @@
       margin-top:18px;
     }
 
-    /* Modal */
     .provider-modal{
       position:fixed;
       inset:0;
@@ -1227,8 +1223,7 @@
         Best results: use a business email and briefly explain whether you operate a single store, multiple locations, or a larger partner network.
       </div>
 
-      <form action="https://formspree.io/f/mdawqqqp" method="POST">
-        <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
+      <form id="contactForm" action="https://formspree.io/f/mdawqqqp" method="POST">
         <input type="text" name="_gotcha" style="display:none">
 
         <div class="two-col">
@@ -1247,7 +1242,7 @@
 
         <textarea name="message" placeholder="Tell us about your business, current setup, number of locations, or what you are looking for." required></textarea>
 
-        <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px;">
+        <button id="submitBtn" type="submit" class="btn btn-primary" style="width:100%; font-size:18px;">
           Submit Business Inquiry
         </button>
       </form>
@@ -1270,7 +1265,6 @@
     <p>&copy; 2026 <strong>LuckyOne Games Inc.</strong> B2B Platform Solutions. All Rights Reserved.</p>
   </div>
 
-  <!-- Provider Modal -->
   <div id="providerModal" class="provider-modal" aria-hidden="true">
     <div class="provider-modal-backdrop"></div>
 
@@ -1336,6 +1330,43 @@
     providerModalImage.addEventListener('error', function () {
       providerModalCaption.textContent = 'Sample image not found. Check the file path and file name.';
     });
+
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+
+        const formData = new FormData(contactForm);
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            window.location.href = 'https://luckyonegames.com/thank-you.html';
+          } else {
+            alert('Submission failed. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          }
+        } catch (error) {
+          alert('Network error. Please try again.');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      });
+    }
   </script>
 
 </body>
