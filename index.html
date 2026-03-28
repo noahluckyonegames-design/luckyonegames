@@ -11,221 +11,108 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LuckyOne Games | Enterprise B2B Gaming Platforms</title>
+  <title>LuckyOne Games | Enterprise B2B Gaming Platforms for US Suppliers</title>
   
   <style>
     :root {
-      --bg-dark: #070b14;
-      --bg-panel: #0d1424;
       --gold: #dcb362;
       --gold-hover: #f1c775;
-      --text-main: #f8f9fa;
-      --text-muted: #a0abbf;
-      --border-gold: rgba(220, 179, 98, 0.4);
-      --border-light: rgba(255, 255, 255, 0.08);
       --radius: 12px;
     }
     
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    
     body {
-      margin: 0; font-family: 'Inter', -apple-system, sans-serif;
-      background-color: var(--bg-dark);
-      background-image: radial-gradient(circle at 50% 0%, #152238 0%, transparent 70%);
-      color: var(--text-main);
-      line-height: 1.6;
+      margin: 0; padding: 0;
+      font-family: 'Inter', -apple-system, sans-serif;
+      /* 💡 [핵심] 사장님이 좋아하신 그 랜더링 시안(image_13.png)을 통째로 배경으로 지정 */
+      background-image: url('image_13.png'); 
+      background-size: cover; /* 화면에 꽉 차게 */
+      background-position: center top; /* 가운데 상단 기준 */
+      background-attachment: fixed; /* 스크롤 해도 배경 고정 */
+      background-color: #070b14; /* 이미지 로딩 전 배경색 */
+      color: #fff;
     }
 
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    
-    .topbar { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); background: rgba(7, 11, 20, 0.85); border-bottom: 1px solid var(--border-light); padding: 15px 0; }
-    .nav { display: flex; align-items: center; justify-content: space-between; }
-    
-    .brand { display: flex; align-items: center; text-decoration: none; border: none; background: transparent; }
-    .brand-l { color: #111; border-radius: 8px; border: 2px solid var(--gold); background: var(--gold); padding: 3px 12px; margin-right: 12px; font-weight: 900; font-size: 20px;}
-    
-    .btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; font-size: 15px; text-align: center; cursor: pointer; border: none; }
-    .btn-primary { background: var(--gold); color: #000; box-shadow: 0 4px 15px rgba(220, 179, 98, 0.2); }
-    .btn-primary:hover { background: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(220, 179, 98, 0.4); }
+    /* 💡 배경 이미지가 워낙 고화질이라, 스크롤을 만들어주기 위한 투명한 높이값 */
+    .scroller { height: 400vh; position: relative; }
 
-    .hero { padding: 100px 0 60px; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .hero-text h1 { font-size: clamp(32px, 4vw, 50px); line-height: 1.15; margin: 0 0 20px; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; }
-    .lead { font-size: 20px; color: var(--text-muted); margin-bottom: 40px; }
-    
-    .hero-visual img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border-gold); display: block; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.5); aspect-ratio: 4/3;}
-
-    .partners-section { padding: 50px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); background: rgba(0,0,0,0.2); }
-    .partners-section h2 { font-size: 24px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; text-align: center; color: #fff;}
-    .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
-    
-    .partners-grid img { 
-      background: #fff; border-radius: 8px; width: 100%; height: 75px; object-fit: contain; 
-      transition: 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    /* 💡 [핵심] 문의 폼을 시안의 우측 하단 폼 자리에 정확히 얹기 (절대 좌표 사용) */
+    .form-overlay {
+      position: absolute;
+      top: 310vh; /* 시안 속 폼이 시작되는 대략적인 높이 (조정 가능) */
+      right: 5%;   /* 시안 속 폼의 우측 여백 */
+      width: 450px; /* 시안 속 폼의 너비 */
+      
+      background: rgba(13, 20, 36, 0.95); /* 시안과 유사한 다크 패널 배경 */
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 50px;
+      border-radius: var(--radius);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.8);
+      backdrop-filter: blur(10px);
+      z-index: 10;
     }
-    .partners-grid img:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 10px 25px rgba(220,179,98,0.2); }
-
-    .solutions-section { padding: 80px 0; }
-    .solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-    .feature-card { 
-      background: var(--bg-panel); border: 1px solid var(--border-gold); padding: 40px 30px; 
-      border-radius: var(--radius); text-align: center; transition: 0.3s;
-    }
-    .feature-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(220,179,98,0.1); transform: translateY(-5px); }
-    .feature-icon { width: 60px; height: 60px; margin: 0 auto 25px; display: grid; place-items: center; border-radius: 50%; background: rgba(220,179,98,0.1); color: var(--gold); font-size: 28px; }
-    .feature-card h3 { color: var(--gold); margin: 0 0 15px; font-size: 22px; text-transform: uppercase; }
-    .feature-card p { color: var(--text-muted); margin: 0; font-size: 16px; }
-
-    .machine-section { padding: 80px 0; border-top: 1px solid var(--border-light); background: rgba(0,0,0,0.3);}
-    .machine-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
     
-    .machine-visual img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border-gold); display: block; object-fit: cover; box-shadow: 0 20px 50px rgba(0,0,0,0.5); aspect-ratio: 4/3;}
-
-    .highlight-list { list-style: none; padding: 0; margin: 30px 0; }
-    .highlight-list li { margin-bottom: 15px; padding-left: 35px; position: relative; color: var(--text-muted); font-size: 17px; }
-    .highlight-list li::before { content: "✓"; color: var(--gold); position:absolute; left:0; font-weight:bold; }
-
-    .form-section { padding: 100px 0; border-top: 1px solid var(--border-light); }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-    .form-panel { background: var(--bg-panel); border: 1px solid var(--border-light); padding: 50px; border-radius: var(--radius); }
-    .form-panel h3 { margin-top: 0; font-size: 28px; color: var(--gold); margin-bottom: 15px; }
+    .form-overlay h3 { margin-top: 0; font-size: 28px; color: var(--gold); margin-bottom: 20px; text-align: center; text-transform: uppercase;}
     
     input, select, textarea { 
       width: 100%; padding: 18px; margin-bottom: 25px; border-radius: 10px; 
-      border: 1px solid var(--border-light); background: rgba(0,0,0,0.5); 
+      border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(0,0,0,0.5); 
       color: #fff; font-size: 16px; font-family: inherit;
     }
     input:focus, select:focus, textarea:focus { border-color: var(--gold); outline: none; }
     textarea { height: 120px; resize: none; }
 
-    .disclaimer-box { border: 2px solid rgba(255,80,80,0.3); padding: 25px; border-radius: 10px; background: rgba(255,80,80,0.05); margin-top: 35px; text-align: left;}
+    .btn { padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; font-size: 16px; text-align: center; cursor: pointer; border: none; width: 100%; }
+    .btn-primary { background: var(--gold); color: #000; box-shadow: 0 4px 15px rgba(220, 179, 98, 0.2); }
+    .btn-primary:hover { background: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(220, 179, 98, 0.4); }
 
+    /* 모바일 대응 (폼 위치 조정) */
     @media (max-width: 900px) {
-      .hero-grid, .solutions-grid, .form-grid, .machine-grid { grid-template-columns: 1fr; }
+      .form-overlay {
+        position: static; margin: 100px auto; width: 90%; padding: 30px;
+      }
+      .scroller { height: auto; }
+      body { background-attachment: scroll; background-size: contain; background-repeat: no-repeat; }
     }
   </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap nav">
-    <a href="/" class="brand">
-      <span class="brand-badge brand-l">L</span>
-      <span style="color:var(--text-main); font-size:24px; font-weight:900; letter-spacing:-1px;">LuckyOne <span style="color:var(--gold);">Games</span></span>
-    </a>
-    <a href="#apply" class="btn btn-primary" style="padding:10px 25px; font-size:14px;">Partner Inquiry</a>
-  </div>
-</div>
-
-<div class="wrap hero">
-  <div class="hero-grid">
-    <div class="hero-text">
-      <span style="color:var(--gold); font-weight:bold; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:15px; display:block;">Nationwide B2B Solutions</span>
-      <h1>DELIVER DOMINANT GAMING PLATFORMS TO YOUR STATE</h1>
-      <p class="lead">Bring the exact same world-class entertainment found on top global platforms directly to your state. From single retail shops to Enterprise Networks, we scale to fit your business.</p>
-      <a href="#apply" class="btn btn-primary">Request Territory Access</a>
-    </div>
-    <div class="hero-visual">
-      <img src="https://images.unsplash.com/photo-1592819695396-981faee6ee96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="LuckyOne Showcase">
-    </div>
-  </div>
-</div>
-
-<div class="partners-section">
-  <h2 style="text-align:center; color:#fff; margin-top:0; margin-bottom:40px; font-size:28px;">100% Certified Original Content</h2>
-  <div class="wrap partners-grid">
-    <img src="https://placehold.co/160x75/ffffff/111111?text=Evolution&font=Montserrat" alt="Evolution">
-    <img src="https://placehold.co/160x75/ffffff/111111?text=Pragmatic&font=Montserrat" alt="Pragmatic Play">
-    <img src="https://placehold.co/160x75/ffffff/111111?text=Microgaming&font=Montserrat" alt="Microgaming">
-    <img src="https://placehold.co/160x75/ffffff/111111?text=PG+Soft&font=Montserrat" alt="PG Soft">
-    <img src="https://placehold.co/160x75/ffffff/111111?text=CQ9&font=Montserrat" alt="CQ9">
-  </div>
-</div>
-
-<div class="wrap solutions-section">
-  <div class="solutions-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🛡️</div>
-      <h3>Certified Global Games</h3>
-      <p>Connect directly to official servers of leaders like Evolution and Pragmatic Play. Fair play, verified RTP.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">💾</div>
-      <h3>State Recovery System</h3>
-      <p>Internet drops happen, but data loss shouldn't. Perfect state preservation ensures seamless play even during disconnections.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⚙️</div>
-      <h3>Agent-Led Operations</h3>
-      <p>Take full control. Powerful backoffice to manage users, sub-agents, monitor metrics, and ensure state compliance.</p>
-    </div>
-  </div>
-</div>
-
-<div class="wrap machine-section">
-  <div class="machine-grid">
-    <div class="machine-visual">
-      <img src="https://images.unsplash.com/photo-1518622119043-34e8574c3e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="LuckyOne Machine Showcase">
-    </div>
-    <div class="machine-info">
-      <h2 style="font-size:36px; color:var(--gold); margin-top:0; text-transform:uppercase;">From Single Retail Shops to Branded Networks</h2>
-      <p style="color:var(--text-muted); font-size:18px;">Complete omni-channel solution. Deploy on mobile, PC, and native custom cabinets with perfect system unity.</p>
-      <ul class="highlight-list">
-        <li>Store-level control and infinite scalability</li>
-        <li>High durability, custom branding, zero clones</li>
-        <li>Seamless wallet integration</li>
-      </ul>
-      <a href="#apply" class="btn btn-primary" style="padding:15px 30px; font-size:16px; text-decoration:none;">Request Machine Demo</a>
-    </div>
-  </div>
-</div>
-
-<div id="apply" class="form-section">
-  <div class="wrap form-grid">
-    <div class="form-info">
-      <h2 style="font-size:36px; color:var(--gold); margin-top:0;">Request Exclusive Access</h2>
-      <p style="color:var(--text-muted); font-size:18px; margin-bottom:40px;">B2B Only. Directly integrate world-class content with perfect data security. Our enterprise platform provides unquestionable dominance in your state.</p>
-      
-      <div class="disclaimer-box">
-        <p style="margin:0; font-size:12px; color:#ff8a8a; line-height:1.5;">
-          <strong>Legal Disclaimer:</strong> LuckyOne Holdings Inc. (operating as LuckyOne Games) operates exclusively as a B2B software and platform provider. Our software is inherently designed and provided for entertainment and amusement purposes. We do not operate gaming venues, interact with end-users, or process player funds.
-        </p>
-      </div>
-    </div>
+<div class="scroller">
+  
+  <div id="apply" class="form-overlay">
+    <h3>Territory Access</h3>
+    <p style="color:#a0abbf; text-align:center; margin-bottom:30px; font-size:14px;">Direct player support not provided. Business entities only.</p>
     
-    <div class="form-panel">
-      <h3>Territory Access Application</h3>
-      <form action="https://formspree.io/f/mdawqqqp" method="POST">
-        <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
-        <input type="text" name="name" placeholder="Contact Full Name" required>
-        <input type="email" name="email" placeholder="Business Email" required>
-        
-        <select name="business_type" required>
-          <option value="">Select Business Size</option>
-          <option value="Single Store">Single Store / Internet Cafe</option>
-          <option value="Multiple Venues">Multiple Venues (2-10 locations)</option>
-          <option value="Regional Distributor">Regional Distributor</option>
-          <option value="Online Only">Online Only Operator</option>
-        </select>
-        
-        <select name="state" required>
-          <option value="">Select Target State</option>
-          <option value="Texas">Texas</option>
-          <option value="Florida">Florida</option>
-          <option value="Arizona">Arizona</option>
-          <option value="Carolinas">North/South Carolina</option>
-          <option value="Other">Other US State</option>
-        </select>
-        
-        <textarea name="message" placeholder="Describe your current distribution network or venue operations..." required></textarea>
-        <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px;">Submit Inquiry</button>
-      </form>
-    </div>
+    <form action="https://formspree.io/f/mdawqqqp" method="POST">
+      <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
+      <input type="text" name="name" placeholder="Contact Full Name" required>
+      <input type="email" name="email" placeholder="Business Email" required>
+      
+      <select name="business_type" required>
+        <option value="">Select Business Size</option>
+        <option value="Single Store">Single Store / Internet Cafe</option>
+        <option value="Multiple Venues">Multiple Venues (2-10 locations)</option>
+        <option value="Regional Distributor">Regional Distributor</option>
+        <option value="Online Only">Online Only Operator</option>
+      </select>
+      
+      <select name="state" required>
+        <option value="">Select Target State</option>
+        <option value="Texas">Texas</option>
+        <option value="Florida">Florida</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Carolinas">North/South Carolina</option>
+        <option value="Other">Other US State</option>
+      </select>
+      
+      <textarea name="message" placeholder="Describe your operations..." required></textarea>
+      <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+    </form>
   </div>
-</div>
 
-<div class="footer wrap" style="padding:40px 0; text-align:center; color:var(--text-muted); font-size:13px; border-top:1px solid var(--border-light);">
-  <p>&copy; 2026 <strong>LuckyOne Holdings Inc.</strong> Operating as LuckyOne Games. B2B Software Provider. All Rights Reserved.</p>
 </div>
 
 </body>
