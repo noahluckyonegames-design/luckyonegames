@@ -11,8 +11,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite B2B Gaming Software | Sweepstakes & Casino Platforms (TX, FL, AZ, NC, SC)</title>
-  <meta name="description" content="Premier B2B Gaming Platform Supplier. Expanding in TX, FL, AZ, and Carolinas. Reliable software for regional distributors and agents." />
+  <title>Elite B2B Gaming Platform Supplier | Texas, Florida & Arizona State Partnerships</title>
+  <meta name="description" content="Premier B2B Gaming Platform Supplier for Regional Suppliers & Agents. High Revenue Share & World-Class Content in TX, FL, AZ, NC, SC." />
   
   <style>
     :root{
@@ -34,60 +34,40 @@
     .brand{display:flex; align-items:center; gap:10px; font-weight:900; font-size:20px;}
     .brand-badge{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, #ffe2a3, #b6781f); display:grid; place-items:center; color:#111;}
     
-    /* Hero Section */
     .hero{padding:80px 0 60px;}
-    .hero-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; align-items:start;}
+    .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;}
+    
+    .hero-text{padding-right:20px;}
     .eyebrow{color:var(--gold); font-weight:bold; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:15px; display:block;}
-    h1{font-size:clamp(36px, 5vw, 60px); line-height:1.1; margin:0 0 25px; letter-spacing:-1.5px;}
-    .lead{font-size:20px; color:var(--muted); margin-bottom:35px;}
+    h1{font-size:clamp(32px, 5vw, 56px); line-height:1.1; margin:0 0 20px; letter-spacing:-1px;}
+    .lead{font-size:18px; color:var(--muted); margin-bottom:30px;}
     
     .btn{padding:18px 35px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-block; transition:0.3s; font-size:16px; border:none; cursor:pointer;}
     .btn-primary{background:linear-gradient(135deg, #ffe2a3, var(--gold-2)); color:#111; box-shadow:0 10px 30px rgba(212,157,56,0.3);}
     .btn-primary:hover{transform:translateY(-3px); box-shadow:0 15px 40px rgba(212,157,56,0.5);}
+    
+    .hero-visual{position:relative;}
+    .hero-visual img{width:100%; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,0.5); display:block; aspect-ratio:16/10; object-fit:cover;}
+    .visual-overlay{position:absolute; bottom:15px; left:15px; background:rgba(0,0,0,0.7); color:#fff; padding:8px 15px; border-radius:10px; font-size:14px; font-weight:bold;}
 
     .status-box{margin-top:40px; padding:25px; background:rgba(247,201,109,0.07); border-radius:20px; border:1px solid rgba(247,201,109,0.2); border-left:5px solid var(--gold);}
     .status-box strong{color:var(--gold); display:block; margin-bottom:5px;}
 
-    /* Game Showcase Visual */
-    .hero-visual{position:sticky; top:120px;}
-    .game-showcase{width:100%; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,0.6); position:relative;}
-    .game-showcase img{width:100%; display:block; object-fit:cover; aspect-ratio:16/10;}
-    .visual-overlay{position:absolute; bottom:0; left:0; right:0; padding:20px; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent); color:#fff; font-weight:bold; font-size:18px;}
+    /* Why Us Section */
+    .why-us{padding:60px 0;}
+    .feature-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+    .card{background:var(--card); padding:30px; border-radius:var(--radius-lg); border:1px solid var(--line);}
+    .card h3{color:var(--gold); margin-top:0; margin-bottom:10px;}
+    .card p{color:var(--muted); margin:0; font-size:15px;}
 
-    /* Form Section */
-    .form-section{padding:80px 0;}
-    .form-container{background:var(--card); padding:50px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 30px 60px rgba(0,0,0,0.5); max-width:800px; margin:0 auto; text-align:center;}
-    .form-container h3{margin-top:0; font-size:28px; color:#fff;}
-    .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:15px; text-align:left;}
+    .form-container{background:var(--card); padding:40px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 30px 60px rgba(0,0,0,0.5); max-width:800px; margin:0 auto; text-align:center; margin-top:50px;}
     input, select, textarea {
       width:100%; padding:15px; margin-bottom:15px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,0.3); color:#fff; font-size:15px;
     }
-    textarea{grid-column: span 2; height:120px;}
+    textarea{height:100px;}
     input:focus, select:focus{border-color:var(--gold); outline:none;}
 
-    /* Provider Grid Section */
-    .providers-section{padding:80px 0; border-top:1px solid var(--line);}
-    .providers-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:25px;}
-    .provider-card{background:rgba(255,255,255,0.03); border-radius:var(--radius-lg); border:1px solid var(--line); overflow:hidden; transition:0.3s; cursor:pointer; position:relative;}
-    .provider-card:hover{transform:translateY(-5px); border-color:rgba(247,201,109,0.3); box-shadow:0 15px 30px rgba(0,0,0,0.4);}
-    .provider-card img{width:100%; aspect-ratio:2/1; object-fit:cover; display:block; border-bottom:1px solid var(--line);}
-    .provider-info{padding:20px; text-align:center;}
-    .provider-info strong{display:block; font-size:18px; color:#fff; margin-bottom:5px;}
-    .provider-info span{font-size:13px; color:var(--muted);}
-    .click-hint{position:absolute; bottom:10px; right:10px; background:var(--gold); color:#111; padding:5px 10px; border-radius:50px; font-size:10px; font-weight:bold; text-transform:uppercase;}
-
-    /* Modal (Popup) Style */
-    .modal {
-      display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.9); backdrop-filter:blur(5px);
-    }
-    .modal-content {
-      margin:5% auto; display:block; width:80%; max-width:1000px; border-radius:20px; border:2px solid var(--gold); box-shadow:0 0 50px rgba(247,201,109,0.3);
-    }
-    .modal-close {
-      position:absolute; top:30px; right:50px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer;
-    }
-
-    @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} .form-grid{grid-template-columns:1fr;} textarea{grid-column: span 1;} }
+    @media (max-width:768px){ .hero-grid{grid-template-columns:1fr;} .hero-text{padding-right:0;} }
   </style>
 </head>
 <body>
@@ -98,7 +78,7 @@
       <div class="brand-badge">L</div>
       <span>LuckyOne Gaming Solutions</span>
     </div>
-    <a href="#apply" class="btn-primary" style="padding:10px 20px; font-size:14px; text-decoration:none; border-radius:50px;">Apply for Partnership</a>
+    <a href="#apply" class="btn-primary" style="padding:10px 20px; font-size:14px; text-decoration:none; border-radius:50px;">Apply for State Territory</a>
   </div>
 </div>
 
@@ -106,131 +86,77 @@
   <div class="hero-grid">
     <div class="hero-text">
       <span class="eyebrow">Enterprise B2B Partnership 2026</span>
-      <h1>Scalable Gaming Solutions for US State Suppliers</h1>
+      <h1>Dominant Sweepstakes & Casino Platforms for US Regional Suppliers</h1>
       <p class="lead">
-        We provide high-retention <strong>Online Sweepstakes & Casino Platforms</strong> specifically designed for regional distributors and state 에이전트. Dominant your market with our proven technology.
+        We provide high-performance <strong>Online Gaming Solutions</strong> specifically designed for state-levelエージェント and distributors. Scalable tech, unmatched reliability.
       </p>
       
-      <a href="#apply" class="btn btn-primary">Request Territory Access</a>
+      <div class="hero-actions">
+        <a href="#apply" class="btn btn-primary">Become a LuckyOne Supplier</a>
+      </div>
 
       <div class="status-box">
-        <strong>🔥 Active State Expansion:</strong>
-        Now accepting New Partnerships for <strong>Texas, Florida, Arizona, North/South Carolina.</strong> Slots are filling fast.
+        <strong>🔥 Territory Update:</strong> Now accepting New Partnerships for <strong>Texas, Florida, Arizona, North/South Carolina.</strong> Slots are filling fast for 2026.
       </div>
     </div>
 
     <div class="hero-visual">
-      <div class="game-showcase">
-        <img src="https://luckyonegames.com/images/evolution-sample.jpg" alt="LuckyOne Gaming Solutions Showcase" onerror="this.src='https://via.placeholder.com/600x400/091223/f7c96d?text=Evolution+Live+Casino+Integration';">
-        <div class="visual-overlay">Evolution Live Casino Integration</div>
-      </div>
+      <img src="https://luckyonegames.com/images/sample.jpg" alt="Evolution Gaming Content Showcase" onerror="this.src='https://via.placeholder.com/600x400/091223/f7c96d?text=High-Performance+Gaming+Showcase'; this.style.opacity='0.5';">
+      <div class="visual-overlay">Evolution Live Casino Integration Showcase</div>
     </div>
   </div>
 </div>
 
-<div class="wrap providers-section">
-  <h2 style="text-align:center; color:#fff; margin-bottom:50px; font-size:28px;">Supported Integrations (Click to view sample)</h2>
-  <div class="providers-grid">
+<div class="wrap why-us">
+  <h2 style="text-align:center; color:#fff; margin-bottom:40px; font-size:28px;">Why Major Regional Agents Choose LuckyOne</h2>
+  
+  <div class="feature-grid">
+    <div class="card">
+      <h3>Tier-1 Integrations</h3>
+      <p>Instant access to world-class content from Evolution, Pragmatic Play, PG Soft, and more. Proven to maximize player LTV.</p>
+    </div>
     
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/evolution-sample.jpg')">
-      <img src="https://luckyonegames.com/images/evolution.jpg" alt="Evolution Gaming" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=Evolution';">
-      <div class="provider-info"><strong>Evolution</strong><span>Live Casino Solutions</span></div>
-      <span class="click-hint">View Sample</span>
+    <div class="card">
+      <h3>Max Revenue Share</h3>
+      <p>We offer the most aggressive revenue share structures in the market, allowing regional 에이전트 to maximize their state-level profits.</p>
     </div>
-
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/pragmatic-sample.jpg')">
-      <img src="https://luckyonegames.com/images/pragmaticplay.jpg" alt="Pragmatic Play" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=Pragmatic';">
-      <div class="provider-info"><strong>Pragmatic Play</strong><span>Slots & Live Casino Content</span></div>
-      <span class="click-hint">View Sample</span>
+    
+    <div class="card">
+      <h3>Compliance First</h3>
+      <p>Platform software built with local regulatory requirements in mind for Texas, Florida, and other key US jurisdictions.</p>
     </div>
-
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/pgsoft-sample.jpg')">
-      <img src="https://luckyonegames.com/images/pgsoft.jpg" alt="PG Soft" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=PG+Soft';">
-      <div class="provider-info"><strong>PG Soft</strong><span>Mobile-First Slot Games</span></div>
-      <span class="click-hint">View Sample</span>
+    
+    <div class="card">
+      <h3>Branded Platforms</h3>
+      <p>A completely customized, domain-exclusive platform to establish your local brand dominance as a state supplier.</p>
     </div>
-
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/microgaming-sample.jpg')">
-      <img src="https://luckyonegames.com/images/microgaming.jpg" alt="Microgaming" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=Microgaming';">
-      <div class="provider-info"><strong>Microgaming</strong><span>Enterprise-Facing Platform</span></div>
-      <span class="click-hint">View Sample</span>
-    </div>
-
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/cq9-sample.jpg')">
-      <img src="https://luckyonegames.com/images/cq9.jpg" alt="CQ9 Gaming" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=CQ9';">
-      <div class="provider-info"><strong>CQ9 Gaming</strong><span>Popular Asian Content</span></div>
-      <span class="click-hint">View Sample</span>
-    </div>
-
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/dreamgaming-sample.jpg')">
-      <img src="https://luckyonegames.com/images/dreamgaming.jpg" alt="Dream Gaming" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=Dream+Gaming';">
-      <div class="provider-info"><strong>Dream Gaming</strong><span>Live Casino Technology</span></div>
-      <span class="click-hint">View Sample</span>
-    </div>
-
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/playson-sample.jpg')">
-      <img src="https://luckyonegames.com/images/playson.jpg" alt="Playson" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=Playson';">
-      <div class="provider-info"><strong>Playson</strong><span>High-Performance Slots</span></div>
-      <span class="click-hint">View Sample</span>
-    </div>
-
-    <div class="provider-card" onclick="openModal('https://luckyonegames.com/images/booongo-sample.jpg')">
-      <img src="https://luckyonegames.com/images/booongo.jpg" alt="Booongo Gaming" onerror="this.src='https://via.placeholder.com/220x110/091223/f7c96d?text=Booongo';">
-      <div class="provider-info"><strong>Booongo Gaming</strong><span>Hold & Win Features</span></div>
-      <span class="click-hint">View Sample</span>
-    </div>
-
   </div>
 </div>
 
-<div id="apply" class="wrap form-section">
-  <div class="form-container">
-    <h3>B2B Territory Access Inquiry</h3>
-    <p style="color:var(--muted); font-size:14px; margin-bottom:30px;">Direct player support is not provided. Business entities only.</p>
+<div id="apply" class="wrapform-container">
+  <h3>Territory Access Inquiry</h3>
+  <p style="color:var(--muted); font-size:14px; margin-bottom:30px;">Direct player support is not provided. Business entities and regional 에이전트 only.</p>
+  
+  <form action="https://luckyonegames.com/thank-you.html" method="GET">
+    <input type="text" name="name" placeholder="Contact Full Name" required>
+    <input type="email" name="email" placeholder="Business Email Address" required>
+    <select name="state" required>
+      <option value="">Select Target State</option>
+      <option value="Texas">Texas</option>
+      <option value="Florida">Florida</option>
+      <option value="Arizona">Arizona</option>
+      <option value="NC/SC">North/South Carolina</option>
+      <option value="Other">Other States</option>
+    </select>
+    <textarea name="business" placeholder="Describe your current operations or distribution network..." required></textarea>
     
-    <form action="https://luckyonegames.com/thank-you.html" method="GET">
-      <div class="form-grid">
-        <input type="text" name="name" placeholder="Contact Full Name" required>
-        <input type="email" name="email" placeholder="Business Email" required>
-        <select name="state" required>
-          <option value="">Target State</option>
-          <option value="Texas">Texas</option>
-          <option value="Florida">Florida</option>
-          <option value="Arizona">Arizona</option>
-          <option value="NC/SC">North/South Carolina</option>
-          <option value="Other">Other States</option>
-        </select>
-        <textarea name="message" placeholder="Describe your distribution network or current operations..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:20px; font-size:18px;">
-        Get Demo Access
-      </button>
-    </form>
-  </div>
+    <button type="submit" class="btn btn-primary" style="width:100%;">Apply & Get Demo Access</button>
+  </form>
 </div>
 
 <div class="footer wrap" style="padding:50px 0; text-align:center; color:var(--muted); font-size:14px; border-top:1px solid var(--line);">
   <p>&copy; 2026 LuckyOne Gaming Solutions. B2B Software Provider. All Rights Reserved.</p>
 </div>
-
-<div id="myModal" class="modal" onclick="closeModal()">
-  <span class="modal-close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImg">
-</div>
-
-<script>
-  function openModal(imgSrc) {
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = imgSrc;
-  }
-
-  function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-  }
-</script>
 
 </body>
 </html>
