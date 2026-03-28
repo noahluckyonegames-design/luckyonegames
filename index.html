@@ -33,7 +33,7 @@
     .brand{display:flex; align-items:center; gap:10px; font-weight:900; font-size:20px;}
     .brand-badge{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, #ffe2a3, #b6781f); display:grid; place-items:center; color:#111;}
     
-    .hero{padding:100px 0 80px;}
+    .hero{padding:100px 0 60px;}
     .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
     .eyebrow{color:var(--gold); font-weight:bold; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:15px; display:block;}
     h1{font-size:clamp(36px, 5vw, 60px); line-height:1.1; margin:0 0 25px; letter-spacing:-1.5px;}
@@ -41,21 +41,30 @@
     
     .btn{padding:18px 35px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-block; transition:0.3s; font-size:16px; border:none; cursor:pointer;}
     .btn-primary{background:linear-gradient(135deg, #ffe2a3, var(--gold-2)); color:#111; box-shadow:0 10px 30px rgba(212,157,56,0.3);}
+    .btn-primary:hover{transform:translateY(-3px); box-shadow:0 15px 40px rgba(212,157,56,0.5);}
     
     .hero-visual img{width:100%; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,0.6); display:block; aspect-ratio:16/10; object-fit:cover;}
 
-    .status-box{margin-top:50px; padding:25px; background:rgba(247,201,109,0.07); border-radius:20px; border:1px solid rgba(247,201,109,0.2); border-left:5px solid var(--gold);}
+    .status-box{margin-top:40px; padding:25px; background:rgba(247,201,109,0.07); border-radius:20px; border:1px solid rgba(247,201,109,0.2); border-left:5px solid var(--gold);}
     .status-box strong{color:var(--gold); display:block; margin-bottom:5px;}
 
-    .solutions-section{padding:80px 0; border-top:1px solid var(--line);}
-    .solutions-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; margin-top:50px;}
+    /* 💡 게임 파트너 로고 (부활!) */
+    .partners-section{padding:50px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:60px 0; background:rgba(0,0,0,0.2);}
+    .partners-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:30px; align-items:center; text-align:center;}
+    .partners-grid img{max-width:120px; opacity:0.8; transition:0.3s; filter: brightness(1.2);}
+    .partners-grid img:hover{opacity:1; transform:scale(1.05);}
+
+    /* 💡 비즈니스 솔루션 (환수율 강조) */
+    .solutions-section{padding:60px 0;}
+    .solutions-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px;}
     .card{background:var(--card); padding:40px; border-radius:var(--radius-lg); border:1px solid var(--line); transition:0.3s;}
     .card:hover{border-color:rgba(247,201,109,0.3); transform:translateY(-5px);}
     .card h3{color:var(--gold); margin-top:0; margin-bottom:15px; font-size:24px;}
     .card p{color:var(--muted); margin:0; font-size:16px;}
 
-    .machine-section{padding:80px 0; border-top:1px solid var(--line); background:rgba(0,0,0,0.2);}
-    .machine-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;}
+    /* 💡 커스텀 머신 & 비디오 섹션 */
+    .machine-section{padding:80px 0; border-top:1px solid var(--line); background:rgba(0,0,0,0.3);}
+    .machine-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
     .machine-media{display:grid; grid-template-columns:1fr; gap:20px;}
     .media-card{position:relative; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line); box-shadow:0 20px 50px rgba(0,0,0,0.4);}
     .media-card img, .media-card video{width:100%; display:block; object-fit:cover;}
@@ -64,8 +73,13 @@
     .highlight-list li{margin-bottom:15px; padding-left:30px; position:relative; color:var(--muted); font-size:16px;}
     .highlight-list li::before{content:"✓"; color:var(--gold); position:absolute; left:0; font-weight:bold;}
 
-    .form-container{background:var(--card); padding:50px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 40px 80px rgba(0,0,0,0.6); max-width:850px; margin:50px auto; text-align:center;}
-    input, select, textarea { width:100%; padding:18px; margin-bottom:18px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,0.4); color:#fff; font-size:16px; }
+    /* 💡 문의 폼 (눈에 확 띄게 분리!) */
+    .form-section{padding:80px 0; border-top:1px solid var(--line);}
+    .form-container{background:var(--card); padding:50px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 40px 80px rgba(0,0,0,0.6); max-width:850px; margin:0 auto; text-align:center;}
+    .form-container h3{font-size:32px; margin-top:0; margin-bottom:15px; color:#fff;}
+    input, select, textarea { width:100%; padding:18px; margin-bottom:18px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,0.5); color:#fff; font-size:16px;}
+    textarea{height:120px; resize:none;}
+    input:focus, select:focus, textarea:focus{border-color:var(--gold); outline:none;}
 
     @media (max-width:900px){ .hero-grid, .machine-grid{grid-template-columns:1fr;} }
   </style>
@@ -84,11 +98,25 @@
     <div class="hero-text">
       <span class="eyebrow">Premium B2B Partnership 2026</span>
       <h1>Elite Sweepstakes Platforms for US State Suppliers</h1>
-      <p class="lead">From High-End Mobile & PC to **Custom Machine Cabinets.** We offer world-class gaming content with industry-leading RTP standards for professional agents.</p>
+      <p class="lead">From High-End Mobile & PC to **Custom Machine Cabinets.** We offer world-class gaming content with verified high RTP standards for professional agents.</p>
       <a href="#apply" class="btn btn-primary">Request Territory Access</a>
       <div class="status-box"><strong>🔥 Active Expansion:</strong> Texas, Florida, Arizona, Carolinas. Dominant your market with verified global content.</div>
     </div>
     <div class="hero-visual"><img src="images/sample.jpg" alt="LuckyOne Showcase"></div>
+  </div>
+</div>
+
+<div class="partners-section">
+  <div class="wrap partners-grid">
+    <img src="images/evolution.jpg" alt="Evolution" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Evolution';">
+    <img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Pragmatic';">
+    <img src="images/microgaming.jpg" alt="Microgaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Microgaming';">
+    <img src="images/pgsoft.jpg" alt="PG Soft" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=PG+Soft';">
+    <img src="images/cq9.jpg" alt="CQ9" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=CQ9';">
+    <img src="images/dreamgaming.jpg" alt="Dream Gaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Dream+Gaming';">
+    <img src="images/habanero.jpg" alt="Habanero" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Habanero';">
+    <img src="images/playson.jpg" alt="Playson" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Playson';">
+    <img src="images/booongo.jpg" alt="Booongo" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Booongo';">
   </div>
 </div>
 
@@ -101,11 +129,11 @@
     </div>
     <div class="card">
       <h3>Premium Product Quality</h3>
-      <p>Don't settle for low-quality clones. Our platform delivers authentic, high-definition gaming experiences that build trust with your local player base.</p>
+      <p>Don't settle for low-quality clones. Our platform delivers authentic, high-definition gaming experiences that build unquestionable trust with your local player base.</p>
     </div>
     <div class="card">
       <h3>Agent-Led Compliance</h3>
-      <p>Flexible platform architecture empowers regional suppliers to manage operations according to specific state guidelines in TX, FL, and beyond.</p>
+      <p>Our flexible platform architecture empowers regional suppliers to manage operations according to specific state guidelines in TX, FL, and beyond.</p>
     </div>
   </div>
 </div>
@@ -128,4 +156,49 @@
       <h2>Beyond Mobile: Custom Machine Cabinets</h2>
       <p class="lead">LuckyOne provides **customizable machine-style cabinets.** Ideal for physical venues, sweepstakes cafes, and professional field operations.</p>
       <ul class="highlight-list">
-        <li><strong>Venue-Aware:</strong> High-durability cabinets
+        <li><strong>Venue-Aware:</strong> High-durability cabinets for physical locations.</li>
+        <li><strong>Custom Branding:</strong> Full branding control for regional suppliers.</li>
+        <li><strong>Unified System:</strong> Manage mobile, PC, and machine users in one dashboard.</li>
+        <li><strong>Proven Content:</strong> World-class games running natively on offline hardware.</li>
+      </ul>
+      <a href="#apply" class="btn-primary" style="padding:15px 30px; font-size:16px; text-decoration:none;">Request Machine Demo</a>
+    </div>
+  </div>
+</div>
+
+<div id="apply" class="form-section wrap">
+  <div class="form-container">
+    <h3>Territory Access Application</h3>
+    <p style="color:var(--muted); margin-bottom:30px;">Direct player support is not provided. Business entities only.</p>
+    
+    <form action="https://formspree.io/f/mdawqqqp" method="POST">
+      <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+        <input type="text" name="name" placeholder="Contact Full Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
+      </div>
+      
+      <select name="state" required>
+        <option value="">Select State</option>
+        <option value="Texas">Texas</option>
+        <option value="Florida">Florida</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Carolinas">North/South Carolina</option>
+        <option value="Other">Other States</option>
+      </select>
+      
+      <textarea name="message" placeholder="Describe your current distribution network or venue operations..." required></textarea>
+      
+      <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px;">Submit & Get Demo Access</button>
+    </form>
+    
+  </div>
+</div>
+
+<div class="footer wrap" style="padding:50px 0; text-align:center; color:var(--muted); font-size:14px; border-top:1px solid var(--line);">
+  <p>&copy; 2026 LuckyOne Gaming Solutions. Professional B2B Software Provider. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
