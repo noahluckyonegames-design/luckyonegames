@@ -14,6 +14,87 @@
   <title>LuckyOne Games | Scalable Platform Solutions for Business Partners</title>
 
   <style>
+    /* ===== Featured Providers ===== */
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-copy {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* GRID 핵심 */
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.provider-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.provider-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* 이미지 영역 */
+.provider-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+}
+
+/* fallback */
+.fallback {
+  height: 140px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  color: var(--muted);
+}
+
+/* 텍스트 영역 */
+.provider-info {
+  padding: 18px;
+}
+
+.provider-info strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.provider-info span {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.click-hint {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--gold);
+}
     :root{
       --bg-1:#04060c; --bg-2:#091223; --bg-3:#070b14;
       --card:rgba(14,20,36,0.95); --line:rgba(255,255,255,0.1);
