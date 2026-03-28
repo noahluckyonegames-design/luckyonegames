@@ -11,7 +11,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LuckyOne Games | Scalable Gaming Platforms for US Suppliers & Stores</title>
+  <title>LuckyOne Games | Enterprise B2B Gaming Platforms for US Regional Suppliers</title>
   
   <style>
     :root{
@@ -37,29 +37,47 @@
     .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
     .eyebrow{color:var(--gold); font-weight:bold; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:15px; display:block;}
     h1{font-size:clamp(36px, 5vw, 60px); line-height:1.1; margin:0 0 25px; letter-spacing:-1.5px;}
-    .lead{font-size:19px; color:var(--muted); margin-bottom:40px;}
+    .lead{font-size:20px; color:var(--muted); margin-bottom:40px;}
     
     .btn{padding:18px 35px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-block; transition:0.3s; font-size:16px; border:none; cursor:pointer;}
     .btn-primary{background:linear-gradient(135deg, #ffe2a3, var(--gold-2)); color:#111; box-shadow:0 10px 30px rgba(212,157,56,0.3);}
     .btn-primary:hover{transform:translateY(-3px); box-shadow:0 15px 40px rgba(212,157,56,0.5);}
     
+    /* 💡 고화질 쇼케이스 (스마트폰 & 캐비닛) */
     .hero-visual img{width:100%; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,0.6); display:block; aspect-ratio:16/10; object-fit:cover;}
 
     .status-box{margin-top:40px; padding:25px; background:rgba(247,201,109,0.07); border-radius:20px; border:1px solid rgba(247,201,109,0.2); border-left:5px solid var(--gold);}
     .status-box strong{color:var(--gold); display:block; margin-bottom:5px;}
 
+    /* 💡 글로벌 게임사 로고 (흰색 카드 정렬) */
     .partners-section{padding:50px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:60px 0; background:rgba(0,0,0,0.2);}
-    .partners-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:30px; align-items:center; text-align:center;}
-    .partners-grid img{max-width:120px; opacity:0.8; transition:0.3s; filter: brightness(1.2);}
-    .partners-grid img:hover{opacity:1; transform:scale(1.05);}
+    .partners-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:20px; align-items:center; text-align:center;}
+    
+    .partners-grid img {
+      background-color: #ffffff; /* 로고 뒤에 흰색 배경 깔기 */
+      padding: 15px 20px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 160px;
+      height: 75px;
+      object-fit: contain; /* 찌그러지지 않게 박스 안에 딱 맞추기 */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* 입체감 */
+      transition: 0.3s ease;
+    }
+    .partners-grid img:hover {
+      transform: translateY(-5px) scale(1.05); /* 마우스 올리면 살짝 튀어나옴 */
+      box-shadow: 0 10px 25px rgba(247,201,109,0.3); /* 은은한 골드빛 그림자 */
+    }
 
+    /* 💡 비즈니스 솔루션 (RTP 빼고 오리지널성 강조) */
     .solutions-section{padding:60px 0;}
     .solutions-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px;}
     .card{background:var(--card); padding:40px; border-radius:var(--radius-lg); border:1px solid var(--line); transition:0.3s;}
     .card:hover{border-color:rgba(247,201,109,0.3); transform:translateY(-5px);}
     .card h3{color:var(--gold); margin-top:0; margin-bottom:15px; font-size:24px;}
-    .card p{color:var(--muted); margin:0; font-size:15px;}
+    .card p{color:var(--muted); margin:0; font-size:16px;}
 
+    /* 💡 커스텀 머신 & 비디오 섹션 (대규모 렌더링 반영) */
     .machine-section{padding:80px 0; border-top:1px solid var(--line); background:rgba(0,0,0,0.3);}
     .machine-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
     .machine-media{display:grid; grid-template-columns:1fr; gap:20px;}
@@ -70,6 +88,7 @@
     .highlight-list li{margin-bottom:15px; padding-left:30px; position:relative; color:var(--muted); font-size:16px;}
     .highlight-list li::before{content:"✓"; color:var(--gold); position:absolute; left:0; font-weight:bold;}
 
+    /* 💡 문의 폼 (백오피스 & 초고속 세팅 문의 추가) */
     .form-section{padding:80px 0; border-top:1px solid var(--line);}
     .form-container{background:var(--card); padding:50px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 40px 80px rgba(0,0,0,0.6); max-width:850px; margin:0 auto; text-align:center;}
     .form-container h3{font-size:32px; margin-top:0; margin-bottom:15px; color:#fff;}
@@ -77,6 +96,7 @@
     textarea{height:120px; resize:none;}
     input:focus, select:focus, textarea:focus{border-color:var(--gold); outline:none;}
 
+    /* 💡 철벽 법적 면책 조항 */
     .disclaimer-box {background: rgba(255,50,50,0.05); border: 1px solid rgba(255,50,50,0.2); padding: 18px; border-radius: 12px; margin-top: 30px; text-align: left;}
 
     @media (max-width:900px){ .hero-grid, .machine-grid{grid-template-columns:1fr;} }
@@ -94,32 +114,32 @@
 <div class="wrap hero">
   <div class="hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">From Single Stores to Enterprise Networks</span>
-      <h1>Provide Tier-1 Global Gaming to Your Local Market</h1>
-      <p class="lead">Whether you need a fully branded enterprise platform or a turnkey setup for a single local store, we provide the ultimate gaming solution. Bring world-class entertainment to your state today.</p>
-      <a href="#apply" class="btn btn-primary">Request System Access</a>
+      <span class="eyebrow">Nationwide B2B Solutions</span>
+      <h1>DELIVER DOMINANT GAMING PLATFORMS TO YOUR STATE</h1>
+      <p class="lead">Bring the exact same world-class entertainment found on top global platforms directly to your state. From single retail shops to Enterprise Networks, we scale to fit your business.</p>
+      <a href="#apply" class="btn btn-primary">Request Territory Access</a>
       
       <div class="status-box">
-        <strong>🔥 Nationwide Operations Ready:</strong> 
+        <strong>🔥 Nationwide Ready:</strong> 
         Deploy premium global content in <strong>ALL US States.</strong> We support independent shop owners and massive regional distributors alike.
       </div>
     </div>
-    <div class="hero-visual"><img src="images/sample.jpg" alt="LuckyOne Showcase"></div>
+    <div class="hero-visual"><img src="images/sample.jpg" alt="LuckyOne Showcase (Smartphone & Cabinet)"></div>
   </div>
 </div>
 
 <div class="partners-section">
   <h2 style="text-align:center; color:#fff; margin-top:0; margin-bottom:40px; font-size:28px;">100% Certified Original Content We Provide</h2>
   <div class="wrap partners-grid">
-    <img src="images/evolution.jpg" alt="Evolution" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Evolution';">
-    <img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Pragmatic';">
-    <img src="images/microgaming.jpg" alt="Microgaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Microgaming';">
-    <img src="images/pgsoft.jpg" alt="PG Soft" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=PG+Soft';">
-    <img src="images/cq9.jpg" alt="CQ9" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=CQ9';">
-    <img src="images/dreamgaming.jpg" alt="Dream Gaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Dream+Gaming';">
-    <img src="images/habanero.jpg" alt="Habanero" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Habanero';">
-    <img src="images/playson.jpg" alt="Playson" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Playson';">
-    <img src="images/booongo.jpg" alt="Booongo" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Booongo';">
+    <img src="images/evolution.jpg" alt="Evolution" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=Evolution';">
+    <img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=Pragmatic';">
+    <img src="images/microgaming.jpg" alt="Microgaming" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=Microgaming';">
+    <img src="images/pgsoft.jpg" alt="PG Soft" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=PG+Soft';">
+    <img src="images/cq9.jpg" alt="CQ9" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=CQ9';">
+    <img src="images/dreamgaming.jpg" alt="Dream Gaming" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=Dream+Gaming';">
+    <img src="images/habanero.jpg" alt="Habanero" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=Habanero';">
+    <img src="images/playson.jpg" alt="Playson" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=Playson';">
+    <img src="images/booongo.jpg" alt="Booongo" onerror="this.src='https://via.placeholder.com/160x75/091223/f7c96d?text=Booongo';">
   </div>
 </div>
 
@@ -130,12 +150,12 @@
       <p>Connect directly to the official servers of global leaders like Evolution and Pragmatic Play. Deliver fair play without intermediaries or cheap clones.</p>
     </div>
     <div class="card">
-      <h3>Infinite Scalability</h3>
-      <p>From a single internet cafe or convenience store to a massive state-wide branded network, our platform architecture scales instantly to fit your exact business size.</p>
+      <h3>Bulletproof Data Recovery</h3>
+      <p>Internet drops happen, but data loss shouldn't. Our enterprise system guarantees perfect state recovery—preserving every bet and balance seamlessly even during disconnections.</p>
     </div>
     <div class="card">
-      <h3>Bulletproof Data Recovery</h3>
-      <p>Internet drops happen, but data loss shouldn't. Our enterprise system guarantees perfect state recovery—preserving every play seamlessly even during disconnections.</p>
+      <h3>Comprehensive Agent Dashboard</h3>
+      <p>Take full control of your operation. Monitor real-time player activity, manage lower agent networks, and track your metrics with our powerful backoffice.</p>
     </div>
     <div class="card">
       <h3>Agent-Led Operations</h3>
@@ -158,12 +178,12 @@
       </div>
     </div>
     <div class="machine-info">
-      <span class="eyebrow">Perfect for Local Shops & Cafes</span>
+      <span class="eyebrow">Physical Deployment Ready</span>
       <h2>Beyond Mobile: Custom Machine Cabinets</h2>
-      <p class="lead">LuckyOne Games provides **customizable machine-style cabinets.** Bring world-class online gaming directly to single retail shops, internet cafes, and professional field operations.</p>
+      <p class="lead">LuckyOne Games provides **customizable machine-style cabinets.** Bring world-class online gaming directly to physical venues, internet cafes, and professional field operations.</p>
       <ul class="highlight-list">
         <li><strong>Venue-Aware:</strong> High-durability cabinets for physical locations.</li>
-        <li><strong>Store-Level Control:</strong> Manage single or multiple machines easily.</li>
+        <li><strong>Custom Branding:</strong> Full branding control for regional suppliers.</li>
         <li><strong>Unified System:</strong> Manage mobile, PC, and machine users in one dashboard.</li>
         <li><strong>Zero Clones:</strong> Run original, high-definition games natively offline.</li>
       </ul>
@@ -185,26 +205,16 @@
         <input type="email" name="email" placeholder="Business Email" required>
       </div>
       
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
-        <select name="business_type" required>
-          <option value="">Select Business Size</option>
-          <option value="Single Store">Single Store / Internet Cafe</option>
-          <option value="Multiple Venues">Multiple Venues (2-10 locations)</option>
-          <option value="Regional Distributor">Regional Distributor (Large Network)</option>
-          <option value="Online Only">Online Only Operator</option>
-        </select>
-        
-        <select name="state" required>
-          <option value="">Select Target State</option>
-          <option value="Texas">Texas</option>
-          <option value="Florida">Florida</option>
-          <option value="Arizona">Arizona</option>
-          <option value="Carolinas">North/South Carolina</option>
-          <option value="Other">Other US State</option>
-        </select>
-      </div>
+      <select name="state" required>
+        <option value="">Select Target State</option>
+        <option value="Texas">Texas</option>
+        <option value="Florida">Florida</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Carolinas">North/South Carolina</option>
+        <option value="Other">Other US State</option>
+      </select>
       
-      <textarea name="message" placeholder="Describe your current operations (e.g., I run 1 convenience store / I have a network of 50 agents)..." required></textarea>
+      <textarea name="message" placeholder="Describe your current distribution network or venue operations..." required></textarea>
       
       <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px;">Submit & Get Demo Access</button>
     </form>
