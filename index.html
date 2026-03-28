@@ -1,165 +1,225 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041424138"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18041424138');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LuckyOne Games | Enterprise B2B Solutions</title>
+  <title>LuckyOne Games | Scalable Gaming Platforms for US Suppliers & Stores</title>
   
   <style>
-    :root {
-      --bg-dark: #070b14;
-      --bg-panel: #0d1424;
-      --gold: #dcb362;
-      --gold-hover: #f1c775;
-      --text-main: #f8f9fa;
-      --text-muted: #a0abbf;
-      --border-gold: rgba(220, 179, 98, 0.4);
-      --border-light: rgba(255, 255, 255, 0.08);
+    :root{
+      --bg-1:#04060c; --bg-2:#091223; --bg-3:#070b14;
+      --card:rgba(14,20,36,0.95); --line:rgba(255,255,255,0.1);
+      --gold:#f7c96d; --gold-2:#d49d38; --text:#f6f7fb; --muted:#aab3c7;
+      --radius-xl:30px; --radius-lg:24px;
     }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family: 'Inter', Arial, sans-serif; color:var(--text);
+      background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 50%, var(--bg-3) 100%);
+      line-height:1.6; min-height:100vh;
+    }
+    .wrap{max-width:1200px; margin:0 auto; padding:0 24px;}
+    .topbar{position:sticky; top:0; z-index:100; backdrop-filter:blur(15px); background:rgba(5,9,17,0.8); border-bottom:1px solid var(--line); padding:15px 0;}
+    .nav{display:flex; align-items:center; justify-content:space-between;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900; font-size:20px;}
+    .brand-badge{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, #ffe2a3, #b6781f); display:grid; place-items:center; color:#111;}
     
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0; font-family: 'Inter', -apple-system, sans-serif;
-      background-color: var(--bg-dark);
-      background-image: radial-gradient(circle at 50% 0%, #152238 0%, transparent 70%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .hero{padding:100px 0 60px;}
+    .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+    .eyebrow{color:var(--gold); font-weight:bold; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:15px; display:block;}
+    h1{font-size:clamp(36px, 5vw, 60px); line-height:1.1; margin:0 0 25px; letter-spacing:-1.5px;}
+    .lead{font-size:19px; color:var(--muted); margin-bottom:40px;}
     
-    /* 탑바 */
-    .topbar { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); background: rgba(7, 11, 20, 0.85); border-bottom: 1px solid var(--border-light); padding: 15px 0; }
-    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .btn{padding:18px 35px; border-radius:12px; text-decoration:none; font-weight:800; display:inline-block; transition:0.3s; font-size:16px; border:none; cursor:pointer;}
+    .btn-primary{background:linear-gradient(135deg, #ffe2a3, var(--gold-2)); color:#111; box-shadow:0 10px 30px rgba(212,157,56,0.3);}
+    .btn-primary:hover{transform:translateY(-3px); box-shadow:0 15px 40px rgba(212,157,56,0.5);}
     
-    /* 💡 럭키원 로고 (코드로 구현) */
-    .brand { display: flex; align-items: center; text-decoration: none; gap: 10px; }
-    .brand-l { width: 36px; height: 36px; border: 2px solid var(--gold); border-radius: 8px; display: grid; place-items: center; color: var(--gold); font-weight: 900; font-size: 20px; }
-    .brand-text { font-size: 24px; font-weight: 800; color: white; }
+    .hero-visual img{width:100%; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,0.6); display:block; aspect-ratio:16/10; object-fit:cover;}
 
-    /* 히로 섹션 */
-    .hero { padding: 80px 0; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .hero-text h1 { font-size: 50px; line-height: 1.1; margin: 0 0 20px; color: var(--gold); text-transform: uppercase; font-weight: 900; }
-    .lead { font-size: 20px; color: var(--text-muted); margin-bottom: 40px; }
-    
-    /* 💡 [핵심] 시안 속 고화질 기기 이미지를 코드로 구현한 시각적 박스 */
-    .hero-visual-box {
-      background: linear-gradient(145deg, #121d33, #070b14);
-      border: 1px solid var(--border-gold);
-      border-radius: 30px;
-      height: 400px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-      position: relative;
-    }
-    .hero-visual-box::after {
-      content: "🎰 📱"; /* 실제 이미지가 들어갈 자리에 고화질 이모지로 느낌만 */
-      font-size: 120px;
-      filter: drop-shadow(0 0 20px rgba(220,179,98,0.4));
-    }
+    .status-box{margin-top:40px; padding:25px; background:rgba(247,201,109,0.07); border-radius:20px; border:1px solid rgba(247,201,109,0.2); border-left:5px solid var(--gold);}
+    .status-box strong{color:var(--gold); display:block; margin-bottom:5px;}
 
-    /* 솔루션 카드 */
-    .solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 80px 0; }
-    .card { 
-      background: var(--bg-panel); border: 1px solid var(--border-gold); padding: 40px 30px; 
-      border-radius: 12px; text-align: center;
-    }
-    .card h3 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; }
+    .partners-section{padding:50px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:60px 0; background:rgba(0,0,0,0.2);}
+    .partners-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:30px; align-items:center; text-align:center;}
+    .partners-grid img{max-width:120px; opacity:0.8; transition:0.3s; filter: brightness(1.2);}
+    .partners-grid img:hover{opacity:1; transform:scale(1.05);}
 
-    /* 폼 섹션 (우측 폼 배치) */
-    .form-section { padding: 100px 0; border-top: 1px solid var(--border-light); }
-    .form-grid { display: grid; grid-template-columns: 1fr 450px; gap: 60px; }
-    .form-panel { 
-      background: var(--bg-panel); border: 1px solid var(--border-light); 
-      padding: 50px; border-radius: 20px; box-shadow: 0 40px 100px rgba(0,0,0,0.8);
-    }
-    
-    input, select, textarea { 
-      width: 100%; padding: 18px; margin-bottom: 25px; border-radius: 10px; 
-      border: 1px solid var(--border-light); background: rgba(0,0,0,0.4); 
-      color: #fff; font-size: 16px;
-    }
-    .btn-submit {
-      width: 100%; padding: 20px; border: none; border-radius: 50px;
-      background: var(--gold); color: #000; font-weight: 900; font-size: 18px;
-      cursor: pointer;
-    }
+    .solutions-section{padding:60px 0;}
+    .solutions-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px;}
+    .card{background:var(--card); padding:40px; border-radius:var(--radius-lg); border:1px solid var(--line); transition:0.3s;}
+    .card:hover{border-color:rgba(247,201,109,0.3); transform:translateY(-5px);}
+    .card h3{color:var(--gold); margin-top:0; margin-bottom:15px; font-size:24px;}
+    .card p{color:var(--muted); margin:0; font-size:15px;}
 
-    .disclaimer {
-      border: 2px solid rgba(255,80,80,0.3); padding: 25px; border-radius: 12px;
-      background: rgba(255,80,80,0.05); color: #ff8a8a; font-size: 14px; margin-top: 40px;
-    }
+    .machine-section{padding:80px 0; border-top:1px solid var(--line); background:rgba(0,0,0,0.3);}
+    .machine-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+    .machine-media{display:grid; grid-template-columns:1fr; gap:20px;}
+    .media-card{position:relative; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line); box-shadow:0 20px 50px rgba(0,0,0,0.4);}
+    .media-card img, .media-card video{width:100%; display:block; object-fit:cover;}
 
-    @media (max-width: 900px) { .hero-grid, .solutions-grid, .form-grid { grid-template-columns: 1fr; } }
+    .highlight-list{list-style:none; padding:0; margin:30px 0;}
+    .highlight-list li{margin-bottom:15px; padding-left:30px; position:relative; color:var(--muted); font-size:16px;}
+    .highlight-list li::before{content:"✓"; color:var(--gold); position:absolute; left:0; font-weight:bold;}
+
+    .form-section{padding:80px 0; border-top:1px solid var(--line);}
+    .form-container{background:var(--card); padding:50px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 40px 80px rgba(0,0,0,0.6); max-width:850px; margin:0 auto; text-align:center;}
+    .form-container h3{font-size:32px; margin-top:0; margin-bottom:15px; color:#fff;}
+    input, select, textarea { width:100%; padding:18px; margin-bottom:18px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,0.5); color:#fff; font-size:16px;}
+    textarea{height:120px; resize:none;}
+    input:focus, select:focus, textarea:focus{border-color:var(--gold); outline:none;}
+
+    .disclaimer-box {background: rgba(255,50,50,0.05); border: 1px solid rgba(255,50,50,0.2); padding: 18px; border-radius: 12px; margin-top: 30px; text-align: left;}
+
+    @media (max-width:900px){ .hero-grid, .machine-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
 
 <div class="topbar">
   <div class="wrap nav">
-    <a href="#" class="brand">
-      <div class="brand-l">L</div>
-      <div class="brand-text">LuckyOne <span style="color:var(--gold)">Games</span></div>
-    </a>
-    <div style="color:var(--gold); font-weight:bold; border:1px solid var(--gold); padding:8px 20px; border-radius:50px; font-size:13px;">B2B SOLUTIONS</div>
+    <div class="brand"><div class="brand-badge">L</div><span>LuckyOne Games</span></div>
+    <a href="#apply" class="btn-primary" style="padding:10px 25px; font-size:14px; text-decoration:none; border-radius:50px;">Partner Inquiry</a>
   </div>
 </div>
 
 <div class="wrap hero">
   <div class="hero-grid">
     <div class="hero-text">
-      <span style="color:var(--gold); font-weight:bold; letter-spacing:2px; display:block; margin-bottom:15px;">NATIONWIDE USA READY</span>
-      <h1>DELIVER DOMINANT GAMING PLATFORMS</h1>
-      <p class="lead">Bring the exact same world-class entertainment found on top global platforms directly to your state. From single shops to large networks.</p>
-      <a href="#apply" style="display:inline-block; background:var(--gold); color:black; padding:18px 40px; border-radius:50px; text-decoration:none; font-weight:900; font-size:16px;">GET DEMO ACCESS</a>
-    </div>
-    <div class="hero-visual-box">
-      <div style="color:white; margin-top:20px; font-weight:bold; letter-spacing:1px; opacity:0.8;">MOBILE & CABINET UNITY</div>
-    </div>
-  </div>
-</div>
-
-<div class="wrap solutions-grid">
-  <div class="card"><h3>Certified Games</h3><p style="color:var(--text-muted)">Official servers. No clones.</p></div>
-  <div class="card"><h3>State Recovery</h3><p style="color:var(--text-muted)">Perfect data preservation.</p></div>
-  <div class="card"><h3>Backoffice</h3><p style="color:var(--text-muted)">Powerful agent control.</p></div>
-</div>
-
-<div id="apply" class="form-section">
-  <div class="wrap form-grid">
-    <div class="form-info">
-      <h2 style="font-size:42px; color:var(--gold); margin:0 0 20px; font-weight:900;">REQUEST TERRITORY ACCESS</h2>
-      <p style="font-size:20px; color:var(--text-muted); margin-bottom:40px;">B2B Only. Directly integrate world-class content with perfect data security. Our enterprise platform provides unquestionable dominance.</p>
+      <span class="eyebrow">From Single Stores to Enterprise Networks</span>
+      <h1>Provide Tier-1 Global Gaming to Your Local Market</h1>
+      <p class="lead">Whether you need a fully branded enterprise platform or a turnkey setup for a single local store, we provide the ultimate gaming solution. Bring world-class entertainment to your state today.</p>
+      <a href="#apply" class="btn btn-primary">Request System Access</a>
       
-      <div class="disclaimer">
-        <strong>LEGAL DISCLAIMER:</strong> LuckyOne Holdings Inc. (operating as LuckyOne Games) operates exclusively as a B2B software provider. Our software is designed for entertainment and amusement purposes. We do not operate venues or process player funds.
+      <div class="status-box">
+        <strong>🔥 Nationwide Operations Ready:</strong> 
+        Deploy premium global content in <strong>ALL US States.</strong> We support independent shop owners and massive regional distributors alike.
       </div>
     </div>
+    <div class="hero-visual"><img src="images/sample.jpg" alt="LuckyOne Showcase"></div>
+  </div>
+</div>
 
-    <div class="form-panel">
-      <h3 style="color:var(--gold); margin-top:0; font-size:26px; text-align:center; margin-bottom:30px;">PARTNER INQUIRY</h3>
-      <form action="https://formspree.io/f/mdawqqqp" method="POST">
-        <input type="text" name="name" placeholder="Contact Full Name" required>
-        <input type="email" name="email" placeholder="Business Email" required>
-        <select name="type" required>
-          <option value="">Select Business Size</option>
-          <option value="Store">Single Store / Cafe</option>
-          <option value="Distributor">Regional Distributor</option>
-        </select>
-        <textarea name="message" placeholder="Message/Network Description" required></textarea>
-        <button type="submit" class="btn-submit">SUBMIT APPLICATION</button>
-      </form>
+<div class="partners-section">
+  <h2 style="text-align:center; color:#fff; margin-top:0; margin-bottom:40px; font-size:28px;">100% Certified Original Content We Provide</h2>
+  <div class="wrap partners-grid">
+    <img src="images/evolution.jpg" alt="Evolution" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Evolution';">
+    <img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Pragmatic';">
+    <img src="images/microgaming.jpg" alt="Microgaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Microgaming';">
+    <img src="images/pgsoft.jpg" alt="PG Soft" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=PG+Soft';">
+    <img src="images/cq9.jpg" alt="CQ9" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=CQ9';">
+    <img src="images/dreamgaming.jpg" alt="Dream Gaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Dream+Gaming';">
+    <img src="images/habanero.jpg" alt="Habanero" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Habanero';">
+    <img src="images/playson.jpg" alt="Playson" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Playson';">
+    <img src="images/booongo.jpg" alt="Booongo" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Booongo';">
+  </div>
+</div>
+
+<div class="wrap solutions-section">
+  <div class="solutions-grid">
+    <div class="card">
+      <h3>100% Certified Original Games</h3>
+      <p>Connect directly to the official servers of global leaders like Evolution and Pragmatic Play. Deliver fair play without intermediaries or cheap clones.</p>
+    </div>
+    <div class="card">
+      <h3>Infinite Scalability</h3>
+      <p>From a single internet cafe or convenience store to a massive state-wide branded network, our platform architecture scales instantly to fit your exact business size.</p>
+    </div>
+    <div class="card">
+      <h3>Bulletproof Data Recovery</h3>
+      <p>Internet drops happen, but data loss shouldn't. Our enterprise system guarantees perfect state recovery—preserving every play seamlessly even during disconnections.</p>
+    </div>
+    <div class="card">
+      <h3>Agent-Led Operations</h3>
+      <p>We provide the premium software; you run the business. Our flexible platform empowers you to independently manage operations and adapt to your specific state laws.</p>
     </div>
   </div>
 </div>
 
-<div style="text-align:center; padding:60px 0; color:#444; font-size:12px; border-top:1px solid var(--border-light);">
-  &copy; 2026 LuckyOne Holdings Inc. Operating as LuckyOne Games. B2B Software Provider. All Rights Reserved.
+<div class="machine-section">
+  <div class="wrap machine-grid">
+    <div class="machine-media">
+      <div class="media-card">
+        <video controls preload="metadata" poster="media/video-poster-1.jpg">
+          <source src="media/machine-video-1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+        <div class="media-card"><img src="media/machine-photo-1.jpg" alt="Machine Photo 1"></div>
+        <div class="media-card"><img src="media/machine-photo-2.jpg" alt="Machine Photo 2"></div>
+      </div>
+    </div>
+    <div class="machine-info">
+      <span class="eyebrow">Perfect for Local Shops & Cafes</span>
+      <h2>Beyond Mobile: Custom Machine Cabinets</h2>
+      <p class="lead">LuckyOne Games provides **customizable machine-style cabinets.** Bring world-class online gaming directly to single retail shops, internet cafes, and professional field operations.</p>
+      <ul class="highlight-list">
+        <li><strong>Venue-Aware:</strong> High-durability cabinets for physical locations.</li>
+        <li><strong>Store-Level Control:</strong> Manage single or multiple machines easily.</li>
+        <li><strong>Unified System:</strong> Manage mobile, PC, and machine users in one dashboard.</li>
+        <li><strong>Zero Clones:</strong> Run original, high-definition games natively offline.</li>
+      </ul>
+      <a href="#apply" class="btn-primary" style="padding:15px 30px; font-size:16px; text-decoration:none;">Request Machine Demo</a>
+    </div>
+  </div>
+</div>
+
+<div id="apply" class="form-section wrap">
+  <div class="form-container">
+    <h3>Territory Access Application</h3>
+    <p style="color:var(--muted); margin-bottom:30px;">Direct player support is not provided. Business entities only.</p>
+    
+    <form action="https://formspree.io/f/mdawqqqp" method="POST">
+      <input type="hidden" name="_next" value="https://luckyonegames.com/thank-you.html">
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+        <input type="text" name="name" placeholder="Contact Full Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
+      </div>
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+        <select name="business_type" required>
+          <option value="">Select Business Size</option>
+          <option value="Single Store">Single Store / Internet Cafe</option>
+          <option value="Multiple Venues">Multiple Venues (2-10 locations)</option>
+          <option value="Regional Distributor">Regional Distributor (Large Network)</option>
+          <option value="Online Only">Online Only Operator</option>
+        </select>
+        
+        <select name="state" required>
+          <option value="">Select Target State</option>
+          <option value="Texas">Texas</option>
+          <option value="Florida">Florida</option>
+          <option value="Arizona">Arizona</option>
+          <option value="Carolinas">North/South Carolina</option>
+          <option value="Other">Other US State</option>
+        </select>
+      </div>
+      
+      <textarea name="message" placeholder="Describe your current operations (e.g., I run 1 convenience store / I have a network of 50 agents)..." required></textarea>
+      
+      <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px;">Submit & Get Demo Access</button>
+    </form>
+    
+    <div class="disclaimer-box">
+      <p style="margin:0; font-size:12px; color:var(--muted); line-height:1.6;">
+        <strong style="color:#ff6b6b;">Legal & Compliance Disclaimer:</strong> <strong>LuckyOne Holdings Inc.</strong> (operating as LuckyOne Games) operates exclusively as a B2B software development and platform integration provider. Our software is inherently designed and provided for <strong>entertainment and amusement purposes</strong>. We do not operate gaming venues, interact with end-users, or process player funds. Any implementation of reward structures or monetization models is executed entirely at the sole discretion, direction, and legal responsibility of the independent local agent, distributor, or venue operator. Operators must ensure their business models are in full compliance with all applicable local, state, and federal laws.
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+<div class="footer wrap" style="padding:40px 0 60px; text-align:center; color:var(--muted); font-size:13px; border-top:1px solid var(--line);">
+  <p>&copy; 2026 <strong>LuckyOne Holdings Inc.</strong> Operating as LuckyOne Games. B2B Software Provider. All Rights Reserved.</p>
 </div>
 
 </body>
