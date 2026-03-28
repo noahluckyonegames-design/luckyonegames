@@ -11,8 +11,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite B2B Gaming Platform | Partner Solutions (TX, FL, AZ, NC, SC)</title>
-  <meta name="description" content="Leading B2B Online Gaming & Sweepstakes Platform for US State-Level Suppliers and Regional Distributors." />
+  <title>Elite B2B Gaming Software | Sweepstakes & Casino Platforms (TX, FL, AZ, NC, SC)</title>
+  <meta name="description" content="Official B2B Gaming Platform Supplier for Licensed Operators and Regional Distributors. Expanding in Texas, Florida, and Carolinas." />
   
   <style>
     :root{
@@ -47,12 +47,23 @@
     .status-box{margin-top:40px; padding:25px; background:rgba(247,201,109,0.07); border-radius:20px; border:1px solid rgba(247,201,109,0.2); border-left:5px solid var(--gold);}
     .status-box strong{color:var(--gold); display:block; margin-bottom:5px;}
 
-    .form-container{background:var(--card); padding:40px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 30px 60px rgba(0,0,0,0.5);}
+    /* 이미지 및 비주얼 요소 추가 */
+    .game-visual{width:100%; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,0.5); position:relative;}
+    .game-visual img{width:100%; display:block;}
+    .sweepstakes-badge{position:absolute; top:20px; right:20px; background:var(--gold); color:#111; padding:10px 20px; border-radius:50px; font-weight:bold; text-transform:uppercase; font-size:12px; letter-spacing:1px; box-shadow:0 5px 15px rgba(212,157,56,0.4);}
+
+    .form-container{background:var(--card); padding:40px; border-radius:var(--radius-xl); border:1px solid var(--line); box-shadow:0 30px 60px rgba(0,0,0,0.5); margin-top:50px;}
     .form-container h3{margin-top:0; font-size:24px; color:#fff;}
     input, select, textarea {
       width:100%; padding:15px; margin-bottom:15px; border-radius:12px; border:1px solid var(--line); background:rgba(0,0,0,0.3); color:#fff; font-size:15px;
     }
     input:focus, select:focus{border-color:var(--gold); outline:none;}
+
+    /* 파트너 로고 섹션 추가 */
+    .partners-section{padding:60px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:60px 0;}
+    .partners-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px; align-items:center; text-align:center;}
+    .partners-grid img{max-width:120px; height:auto; filter:grayscale(100%) opacity(60%); transition:0.3s;}
+    .partners-grid img:hover{filter:grayscale(0%) opacity(100%);}
 
     @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
   </style>
@@ -65,50 +76,61 @@
       <div class="brand-badge">L</div>
       <span>LuckyOne Gaming Solutions</span>
     </div>
-    <a href="#apply" class="btn-primary" style="padding:10px 20px; font-size:14px; text-decoration:none; border-radius:50px;">Partner Login</a>
+    <a href="#apply" class="btn-primary" style="padding:10px 20px; font-size:14px; text-decoration:none; border-radius:50px;">Apply for Partnership</a>
   </div>
 </div>
 
 <div class="wrap hero">
   <div class="hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">Enterprise B2B Partnership</span>
-      <h1>Dominant Gaming Solutions for US State Suppliers</h1>
+      <span class="eyebrow">Enterprise B2B Only</span>
+      <h1>Scale Your Gaming Operation with a Proven Partner</h1>
       <p class="lead">
-        Get the most reliable <strong>Online Sweepstakes & Casino Platforms</strong>. Secure, branded, and optimized for high-volume regional distribution.
+        We deliver high-performance <strong>Online Sweepstakes & Casino Platforms</strong> specifically for regional distributors and state-level suppliers in the US.
       </p>
       
-      <div class="hero-actions">
-        <a href="#apply" class="btn btn-primary">Apply for State Partnership</a>
+      <div class="game-visual">
+        <img src="https://luckyonegames.com/images/hero-game-showcase.jpg" alt="LuckyOne Gaming Solutions Showcase" onerror="this.src='https://via.placeholder.com/600x400/091223/f7c96d?text=High-Performance+Gaming+Platform'; this.style.opacity='0.5';">
+        <span class="sweepstakes-badge">Sweepstakes Ready</span>
       </div>
 
-      <div class="status-box">
-        <strong>🔥 Expansion Cities & States:</strong>
-        Actively seeking partners in <strong>Texas, Florida, Arizona, North/South Carolina.</strong> Limited territory slots for 2026.
+      <div class="hero-actions" style="margin-top:40px; text-align:center;">
+        <a href="#apply" class="btn btn-primary">Apply for State Partnership</a>
       </div>
     </div>
 
     <div id="apply" class="form-container">
-      <h3>B2B Inquiry Form</h3>
-      <p style="color:var(--muted); font-size:14px; margin-bottom:25px;">Provide your details to receive our full B2B catalog and demo access.</p>
+      <h3>B2B Partnership Inquiry</h3>
+      <p style="color:var(--muted); font-size:14px; margin-bottom:25px;">Please provide your business details to receive our B2B kit and demo access.</p>
       
       <form action="https://luckyonegames.com/thank-you.html" method="GET">
-        <input type="text" name="name" placeholder="Contact Full Name" required>
-        <input type="email" name="email" placeholder="Business Email Address" required>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
         <select name="state" required>
-          <option value="">Select Target State</option>
+          <option value="">Target State</option>
           <option value="Texas">Texas</option>
           <option value="Florida">Florida</option>
           <option value="Arizona">Arizona</option>
           <option value="NC/SC">North/South Carolina</option>
           <option value="Other">Other States</option>
         </select>
-        <textarea name="business" placeholder="Briefly describe your distribution network or current operations..." required style="height:100px;"></textarea>
+        <textarea name="business" placeholder="Describe your distribution network..." required style="height:100px;"></textarea>
         
-        <button type="submit" class="btn btn-primary" style="width:100%;">Get Instant Demo Access</button>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Submit & Get Demo Access</button>
       </form>
-      <p style="text-align:center; font-size:11px; color:var(--muted); margin-top:15px;">*Direct player inquiries are ignored. Business entities only.</p>
+      <p style="text-align:center; font-size:12px; color:var(--muted); margin-top:15px;">*Direct player support is not provided.</p>
     </div>
+  </div>
+</div>
+
+<div class="partners-section wrap">
+  <h2 style="text-align:center; color:#fff; margin-bottom:40px; font-size:24px;">Supported Integrations</h2>
+  <div class="partners-grid">
+    <img src="https://luckyonegames.com/images/logo-evolution.png" alt="Evolution Gaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Evolution';">
+    <img src="https://luckyonegames.com/images/logo-pragmatic.png" alt="Pragmatic Play" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Pragmatic';">
+    <img src="https://luckyonegames.com/images/logo-microgaming.png" alt="Microgaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=Microgaming';">
+    <img src="https://luckyonegames.com/images/logo-cq9.png" alt="CQ9 Gaming" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=CQ9';">
+    <img src="https://luckyonegames.com/images/logo-pgsoft.png" alt="PG Soft" onerror="this.src='https://via.placeholder.com/120x60/091223/f7c96d?text=PG+Soft';">
   </div>
 </div>
 
