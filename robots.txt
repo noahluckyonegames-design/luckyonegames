@@ -1,0 +1,12 @@
+# Search indexing is separate from model-training access.
+User-agent: OAI-SearchBot
+Allow: /
+
+# Training access has not been requested.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://luckyonegames.com/sitemap.xml

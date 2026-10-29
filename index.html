@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LuckyOne Games | B2B Platform Solutions for Qualified Operators</title>
-  <meta name="description" content="Launch your business platform in as little as 3 days. Free setup available for qualified operators. Built for stores, multi-location businesses, and distribution partners." />
+  <title>LuckyOne Games | B2B Platforms &amp; International Customization</title>
+  <meta name="description" content="B2B game platforms and international customization for language, currency and operating needs. U.S. distribution services and game hardware development by LuckyOne Games." />
 
   <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041424138"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-18041424138');
+    if (['luckyonegames.com', 'www.luckyonegames.com'].includes(location.hostname)) {
+      const tag = document.createElement('script'); tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18041424138';
+      document.head.appendChild(tag); gtag('config', 'AW-18041424138');
+    }
   </script>
 
   <style>
@@ -878,420 +882,158 @@
         justify-content:flex-end;
       }
     }
-  </style>
+
+    :focus-visible{outline:3px solid var(--gold);outline-offset:5px}
+    .skip-link{position:absolute;left:20px;top:-100px;z-index:10000;background:var(--gold);color:#111;padding:12px}
+    .skip-link:focus{top:10px}
+    section[id],div[id]{scroll-margin-top:100px}
+    .nav-actions a{font-size:14px;text-decoration:none;padding:10px 12px}
+    .nav-actions .btn{min-height:44px;padding:10px 18px}
+    .hero{padding:82px 0 58px}.hero-grid{grid-template-columns:1.1fr 0.9fr;gap:54px}
+    h1{font-size:clamp(40px,4.7vw,62px);line-height:1.08}.hero h1 em{font-style:normal;color:var(--gold)}
+    .status-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:800}
+    .business-map{border:1px solid rgba(247,201,109,.25);border-radius:28px;background:linear-gradient(145deg,#172236,#070c17);padding:32px;box-shadow:var(--shadow)}
+    .business-map .map-top{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:24px}
+    .map-name{font-size:13px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+    .map-row{padding:20px 0;border-bottom:1px solid var(--line)}.map-row:last-child{border:0;padding-bottom:0}
+    .map-row h2{font-size:25px;line-height:1.2;margin:8px 0}.map-row p{margin:0;color:var(--muted);font-size:14px}
+    .map-row.development{border:1px dashed rgba(247,201,109,.35);border-radius:16px;padding:20px;margin-top:24px}
+    .intro-line{max-width:730px;margin:0 0 32px;color:var(--muted);font-size:18px}
+    .left-title{text-align:left;font-size:38px}.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .service-grid .card{min-height:270px}.service-grid h3{margin-top:18px}
+    .payment-note{margin-top:20px;padding:20px 24px;border-left:3px solid var(--gold);background:rgba(247,201,109,.04);color:var(--muted)}
+    .payment-note strong{color:var(--text)}
+    .development-note{padding:18px 20px;border:1px solid rgba(247,201,109,.22);border-radius:14px;color:var(--muted);font-size:14px;margin:22px 0}
+    .machine-section{padding:68px 0}.machine-grid{align-items:start}.machine-media figcaption{color:var(--muted);font-size:12px;padding:14px 18px}
+    figure{margin:0}.highlight-list strong{color:#f6f7fb}.highlight-list{font-size:15px}
+    details.gallery{border-top:1px solid var(--line);padding:28px 0}details.gallery summary{cursor:pointer;color:var(--gold);font-size:20px;font-weight:700;min-height:44px}
+    details.gallery .section-copy{text-align:left;margin:16px 0 28px;font-size:14px}
+    .provider-card{font:inherit;color:inherit;text-align:left;border:1px solid var(--line);padding:0}.provider-info{display:block}.fallback{width:100%}
+    .form-container{text-align:left}.form-container h2{font-size:34px;line-height:1.15;margin:0 0 14px}
+    label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}.contact-email{font-size:20px;color:var(--gold);overflow-wrap:anywhere}
+    .form-subtext{margin-top:16px}textarea{resize:vertical;min-height:140px}.form-status{margin:16px 0;color:var(--gold)}
+    .disclaimer-box p{color:var(--muted);font-size:13px}.footer a{color:var(--gold)}
+    @media(max-width:900px){.hero-grid,.service-grid{grid-template-columns:1fr}.hero{padding-top:48px}.business-map{max-width:620px}.hero-grid{gap:30px}}
+    @media(max-width:600px){.wrap{padding:0 20px}.nav{gap:14px}.nav-actions{gap:4px;width:100%;justify-content:space-between}.nav-actions a{padding:8px 4px;font-size:12px}.nav-actions .btn{padding:8px 12px}.topbar{position:relative}.hero{padding-top:36px}h1{font-size:40px;letter-spacing:-1.2px}.lead{font-size:17px}.business-map{padding:24px}.section{padding:40px 0}.left-title{font-size:30px}.machine-section{padding:38px 0}.machine-grid{gap:24px}.form-section{padding:44px 20px}.hero-cta-row .btn{width:100%}.form-container{padding:28px 20px}.form-container h2{font-size:29px}section[id],div[id]{scroll-margin-top:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+
+    .wrap.section{padding-left:24px;padding-right:24px}
+    @media(max-width:600px){.nav{flex-direction:column;align-items:stretch}.brand{font-size:20px}.nav-actions a{display:inline-flex;align-items:center;min-height:44px;font-size:13px}.wrap.section{padding-left:20px;padding-right:20px}}
+
+.platform-showcase{padding-top:64px}.showcase-title{font-size:36px;line-height:1.15;margin:0 0 20px}.catalog-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.catalog-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card)}.catalog-card>img{width:100%;height:340px;object-fit:contain;background:#05070b;display:block}.catalog-card>div{padding:24px}.catalog-card h3{margin:0 0 12px;font-size:26px}.catalog-card p{color:var(--muted);margin:0 0 16px}.catalog-card small{color:var(--muted);font-size:12px}.catalog-note{color:var(--muted);font-size:13px;line-height:1.65;margin:24px 0}.verified-provider-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}.verified-provider-grid .provider-card{min-height:0}.verified-provider-grid .provider-card img{height:180px;padding:0;object-fit:contain}.verified-provider-grid .provider-info{padding:14px}.verified-provider-grid .provider-info strong{font-size:17px}.provider-names{color:var(--muted)}.gallery h4{font-size:21px;margin:28px 0 12px}.platform-showcase>p:last-child{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:900px){.verified-provider-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.catalog-grid{grid-template-columns:1fr}.catalog-card>img{height:300px}.showcase-title{font-size:29px}.verified-provider-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.verified-provider-grid .provider-info strong{font-size:15px}.platform-showcase{padding-top:40px}}
+
+.hardware-feature{margin:48px 0;background:radial-gradient(ellipse at 70% 10%,rgba(247,201,109,.12),transparent 55%),#080e18;border-top:1px solid rgba(247,201,109,.25);border-bottom:1px solid rgba(247,201,109,.25);padding:72px 0}.hardware-heading{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}.hardware-heading h2{font-size:clamp(36px,4.5vw,60px);line-height:1.1;letter-spacing:-1.6px;margin:0 0 24px}.hardware-heading em{font-style:normal;color:var(--gold)}.hardware-status{font-size:12px;letter-spacing:1px;color:var(--gold);border:1px solid rgba(247,201,109,.25);padding:12px 18px;border-radius:12px;margin:0 0 24px}.hardware-concept{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#03060b}.hardware-concept>img{width:100%;max-height:760px;object-fit:contain;display:block}.hardware-concept figcaption,.hardware-reference figcaption{padding:16px 22px;color:var(--muted);font-size:13px}.hardware-services{margin:30px 0}.hardware-services .card{padding:26px}.hardware-services h3{font-size:24px}.hardware-details{margin-top:30px}.hardware-reference summary{cursor:pointer;color:var(--gold);min-height:44px;padding:14px 0}.hardware-reference .machine-grid{margin-top:18px}
+@media(max-width:900px){.hardware-heading{grid-template-columns:1fr;gap:0}.hardware-feature{padding:46px 0}.hardware-heading h2{font-size:42px}}
+@media(max-width:600px){.hardware-heading h2{font-size:36px;letter-spacing:-.8px}.hardware-status{font-size:11px}.hardware-concept figcaption{padding:14px}.hardware-services{gap:16px}}
+.hardware-concept>img{height:auto}.machine-concept-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}.machine-concept-pair img{height:600px;object-fit:contain;background:#e8e8e8}@media(max-width:600px){.machine-concept-pair{grid-template-columns:1fr;gap:18px}.machine-concept-pair img{height:auto;max-height:600px}}
+</style>
+
+  <link rel="canonical" href="https://luckyonegames.com/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LuckyOne Games Inc.">
+  <meta property="og:title" content="LuckyOne Games | B2B Platforms &amp; International Customization">
+  <meta property="og:description" content="B2B game platforms and international customization for language, currency and operating needs. U.S. distribution services and game hardware development by LuckyOne Games.">
+  <meta property="og:url" content="https://luckyonegames.com/">
+  <meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://luckyonegames.com/#organization", "name": "LuckyOne Games Inc.", "url": "https://luckyonegames.com/", "email": "noah@luckyonegames.com", "description": "B2B game platform operations, overseas custom software development, U.S. agency and distribution services, and game machine and mainboard development."}, {"@type": "WebSite", "@id": "https://luckyonegames.com/#website", "url": "https://luckyonegames.com/", "name": "LuckyOne Games", "publisher": {"@id": "https://luckyonegames.com/#organization"}, "inLanguage": "en"}, {"@type": "Service", "name": "B2B game platform services", "provider": {"@id": "https://luckyonegames.com/#organization"}, "url": "https://luckyonegames.com/#platform", "description": "LuckyOne provides the Luckyaces platform, whose public catalog displays live casino, online slots, mini games and fishing. Availability is subject to country, account and applicable permissions."}, {"@type": "Service", "@id": "https://luckyonegames.com/#international-service", "name": "International game platform customization", "serviceType": "Custom software development", "provider": {"@id": "https://luckyonegames.com/#organization"}, "url": "https://luckyonegames.com/#international", "description": "International platform versions can be customized for customer language, currency and operating requirements, subject to technical review and agreed project scope. Currency configuration does not imply local payment processing. U.S. payment system support is separate and U.S.-only."}, {"@type": "Service", "name": "Machine customization and offline casino system project consultation", "provider": {"@id": "https://luckyonegames.com/#organization"}, "url": "https://luckyonegames.com/#hardware", "description": "Machine and mainboard development, customization consultation, international currency configuration, and small-scale offline casino system planning for legally authorized operators. Subject to technical review, licensing requirements and agreed scope. Physical banknote support depends on validator hardware, currency datasets and country firmware."}]}</script>
 </head>
+
 <body>
-
-  <div class="topbar">
-    <div class="wrap nav">
-      <a href="#" class="brand">
-        <div class="brand-badge">L</div>
-        <span>LuckyOne Games</span>
-      </a>
-
-      <div class="nav-actions">
-        <a href="#providers" class="btn btn-secondary" style="padding:10px 18px; min-height:auto; font-size:14px;">View Providers</a>
-        <a href="#apply" class="btn btn-primary" style="padding:10px 22px; min-height:auto; font-size:14px;">Apply for Free Setup</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar"><nav class="wrap nav" aria-label="Main navigation">
+    <a href="#main" class="brand"><span class="brand-badge" aria-hidden="true">L</span><span>LuckyOne Games</span></a>
+    <div class="nav-actions"><a href="#platform">Platform services</a><a href="#hardware">Hardware development</a><a href="#apply" class="btn btn-primary">Contact us</a></div>
+  </nav></header>
+  <main id="main">
+    <section class="wrap hero" aria-labelledby="hero-title"><div class="hero-grid">
+      <div class="hero-text"><span class="eyebrow">LuckyOne Games Inc. / B2B gaming technology</span>
+        <h1 id="hero-title">Game platforms today.<br><em>Building what comes next.</em></h1>
+        <p class="lead">We operate our own online game platforms, provide custom development for overseas businesses, and support U.S. distribution partners. Our next chapter: game machines and integrated mainboards, now in development.</p>
+        <div class="hero-cta-row"><a class="btn btn-primary" href="#platform">Explore our services</a><a class="btn btn-secondary" href="#hardware">See what we’re developing</a></div>
+        <p class="hero-note">Business inquiries, platform demonstrations, and development discussions.</p>
       </div>
-    </div>
-  </div>
-
-  <div class="wrap hero">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <span class="eyebrow">B2B Platform Solutions for Qualified Operators</span>
-
-        <h1>Launch in as Little as 3 Days with Free Setup Available</h1>
-
-        <p class="lead">
-          Built for store operators, multi-location businesses, and distribution partners looking for a more professional,
-          faster, and more reliable deployment process.
-        </p>
-
-        <div class="hero-usp">
-          <div class="pill">3-Day Setup Available</div>
-          <div class="pill">Free Setup for Qualified Operators</div>
-          <div class="pill">Business-Focused Deployment</div>
-        </div>
-
-        <div class="hero-cta-row">
-          <a href="#apply" class="btn btn-primary">Request Private Demo</a>
-          <a href="#providers" class="btn btn-secondary">Explore Providers</a>
-        </div>
-
-        <p class="hero-note">
-          No long development cycle. No generic clone-style rollout. Private onboarding support included.
-        </p>
+      <div class="business-map" aria-label="Our current business and development direction">
+        <div class="map-top"><span class="brand-badge" aria-hidden="true">L</span><span class="map-name">Platforms / Software / Hardware</span></div>
+        <div class="map-row"><span class="status-label">Current business</span><h2>Online game platforms</h2><p>Our own platform operations and business platform services.</p></div>
+        <div class="map-row"><span class="status-label">Business services</span><h2>Development &amp; distribution</h2><p>Overseas custom projects and U.S. agency services.</p></div>
+        <div class="map-row development"><span class="status-label">In development</span><h2>Machines &amp; mainboards</h2><p>A hardware development program with our contracted team in Korea.</p></div>
       </div>
-
-      <div class="hero-visual">
-        <img src="images/sample.jpg" alt="LuckyOne business platform showcase">
-
-        <div class="hero-card-stack">
-          <div class="mini-card">
-            <strong>Fast Launch</strong>
-            <span>Move from inquiry to deployment in as little as 3 days for qualified setups.</span>
-          </div>
-          <div class="mini-card">
-            <strong>Qualified Free Setup</strong>
-            <span>Designed to reduce upfront friction for serious business partners.</span>
-          </div>
-        </div>
+    </div></section>
+    <section id="platform" class="wrap section" aria-labelledby="platform-title">
+      <span class="eyebrow">01 / What we do</span><h2 id="platform-title" class="section-title left-title">B2B platforms, custom development &amp; U.S. distribution.</h2>
+      <p class="intro-line">From platform operations to custom software and local business relationships, each service has its own scope.</p>
+      <div class="service-grid">
+        <article class="card"><span class="status-label">Platform operations</span><h3>Our own online platforms</h3><p>LuckyOne operates its own online game platforms and discusses platform solutions with business operators. Request a private demonstration to explore the right fit.</p></article>
+        <article class="card"><span class="status-label">Overseas projects</span><h3>International platform customization</h3><p>International versions can be customized for your language, currency, and operating requirements. We define the supported configuration and development scope for each project.</p><a href="#international">Explore international customization</a></article>
+        <article class="card"><span class="status-label">United States</span><h3>Agency &amp; distribution services</h3><p>A dedicated service for U.S. business and distribution partners. Discuss your location, business needs, and the scope of local collaboration with our team.</p></article>
       </div>
-    </div>
-  </div>
+      <p class="payment-note"><strong>U.S. payment system support:</strong> Available for U.S. projects only, with a separate service fee. Scope and terms are discussed for each project.</p>
+<div class="platform-showcase" id="luckyaces">
+<span class="eyebrow">Our platform / Luckyaces</span><h3 class="showcase-title">A closer look at the platform we provide.</h3>
+<p class="intro-line">Luckyaces brings live casino, online slots, mini games, and fishing categories into one platform. Explore the publicly displayed catalog below, then contact LuckyOne Games to discuss your business requirements.</p>
+<div class="catalog-grid"><article class="catalog-card"><img src="images/luckyaces/evolution.webp" alt="Evolution artwork displayed on Luckyaces"><div><h3>Live casino</h3><p>Browse the live provider selection. The public platform requires login before entry to live lobbies.</p><small>Artwork from the public Luckyaces catalog; not a screenshot of a running game.</small></div></article><article class="catalog-card"><img src="images/luckyaces/pragmaticplay.webp" alt="PragmaticPlay artwork displayed on Luckyaces"><div><h3>Online slots</h3><p>Browse providers and slot titles from the public catalog. Examples on the home screen include Sweet bonanza and Gates of Olympus 1000™.</p><small>Artwork from the public Luckyaces catalog; not a screenshot of a running game.</small></div></article><article class="catalog-card"><img src="images/luckyaces/aviator.webp" alt="Aviator artwork displayed on Luckyaces"><div><h3>Mini games</h3><p>The public catalog lists Hotline, MiniRoulette, Keno, HiLo, Mines, Plinko, Goal, Dice, and Aviator. Aviator is labeled Spribe on the home screen.</p><small>Artwork from the public Luckyaces catalog; not a screenshot of a running game.</small></div></article><article class="catalog-card"><img src="images/luckyaces/royal-fishing.webp" alt="Royal Fishing artwork displayed on Luckyaces"><div><h3>Fishing</h3><p>The public catalog includes Royal Fishing, All-Star Fishing, Happy Fishing, Dragon Hunter, Jade Toad Fishing, Fishermen Gold, and more.</p><small>Artwork from the public Luckyaces catalog; not a screenshot of a running game.</small></div></article></div>
+<div class="catalog-note">Catalog observed on October 29, 2026. Game and provider availability varies by country, account, and applicable permissions. Brand names and artwork belong to their respective owners; listing them does not represent an official partnership or certification. No logged-in account or gameplay screens are shown.</div>
+<details class="gallery" id="providers"><summary>View all publicly listed providers and more game examples</summary><h4>Live providers</h4><p class="provider-names">PragmaticPlay Live, Dream Game, Asia Gaming, MicroGaming, Evolution.</p><div class="verified-provider-grid"><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="PragmaticPlay Live" data-sample="images/luckyaces/pragmaticplay-live.webp" data-caption="Live provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/pragmaticplay-live.webp" alt="PragmaticPlay Live"><div class="provider-info"><strong>PragmaticPlay Live</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Dream Game" data-sample="images/luckyaces/dream-game.webp" data-caption="Live provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/dream-game.webp" alt="Dream Game"><div class="provider-info"><strong>Dream Game</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Asia Gaming" data-sample="images/luckyaces/asia-gaming.webp" data-caption="Live provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/asia-gaming.webp" alt="Asia Gaming"><div class="provider-info"><strong>Asia Gaming</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="MicroGaming" data-sample="images/luckyaces/microgaming.webp" data-caption="Live provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/microgaming.webp" alt="MicroGaming"><div class="provider-info"><strong>MicroGaming</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Evolution" data-sample="images/luckyaces/evolution.webp" data-caption="Live provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/evolution.webp" alt="Evolution"><div class="provider-info"><strong>Evolution</strong><span>View catalog artwork</span></div></div></div><h4>Slots providers</h4><p class="provider-names">PragmaticPlay, Booongo, Habanero, PG Soft, CQ9, Jili, Netent, EGT, Amatic, Amusnet, Hacksaw, Nolimit City, Red Tiger.</p><div class="verified-provider-grid"><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="PragmaticPlay" data-sample="images/luckyaces/pragmaticplay.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/pragmaticplay.webp" alt="PragmaticPlay"><div class="provider-info"><strong>PragmaticPlay</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Booongo" data-sample="images/luckyaces/booongo.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/booongo.webp" alt="Booongo"><div class="provider-info"><strong>Booongo</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Habanero" data-sample="images/luckyaces/habanero.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/habanero.webp" alt="Habanero"><div class="provider-info"><strong>Habanero</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="PG Soft" data-sample="images/luckyaces/pg-soft.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/pg-soft.webp" alt="PG Soft"><div class="provider-info"><strong>PG Soft</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="CQ9" data-sample="images/luckyaces/cq9.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/cq9.webp" alt="CQ9"><div class="provider-info"><strong>CQ9</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Jili" data-sample="images/luckyaces/jili.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/jili.webp" alt="Jili"><div class="provider-info"><strong>Jili</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Netent" data-sample="images/luckyaces/netent.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/netent.webp" alt="Netent"><div class="provider-info"><strong>Netent</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="EGT" data-sample="images/luckyaces/egt.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/egt.webp" alt="EGT"><div class="provider-info"><strong>EGT</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Amatic" data-sample="images/luckyaces/amatic.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/amatic.webp" alt="Amatic"><div class="provider-info"><strong>Amatic</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Amusnet" data-sample="images/luckyaces/amusnet.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/amusnet.webp" alt="Amusnet"><div class="provider-info"><strong>Amusnet</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Hacksaw" data-sample="images/luckyaces/hacksaw.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/hacksaw.webp" alt="Hacksaw"><div class="provider-info"><strong>Hacksaw</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Nolimit City" data-sample="images/luckyaces/nolimit-city.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/nolimit-city.webp" alt="Nolimit City"><div class="provider-info"><strong>Nolimit City</strong><span>View catalog artwork</span></div></div><div role="button" tabindex="0" class="provider-card provider-modal-trigger" data-title="Red Tiger" data-sample="images/luckyaces/red-tiger.webp" data-caption="Slots provider artwork displayed in the public Luckyaces catalog."><img loading="lazy" src="images/luckyaces/red-tiger.webp" alt="Red Tiger"><div class="provider-info"><strong>Red Tiger</strong><span>View catalog artwork</span></div></div></div>
+<h4>Mini games</h4><p>Hotline · MiniRoulette · Keno · HiLo · Mines · Plinko · Goal · Dice · Aviator. Spribe is explicitly named for Aviator on the public home screen; other mini-game provider names are not displayed in this category view.</p>
+<h4>Fishing titles displayed</h4><p>Royal Fishing · All-Star Fishing · Happy Fishing · Mego Fishing · Boom Leggend · Dragon Fortune · Dragon Hunter · Boombing Fishing · Gold Cai Shen 2 Fishing · GODZ Fishing · Gold Cai Shen Fishing · Gold Dragon Fishing 360 · Go Gold Fishing 360 · Jade Toad Fishing · Fishermen Gold · Lustrous Ocean · Oneshot Fishing · Hero Fishing · Onestick Fishing · Paradise 2 · Paradise.</p><p class="catalog-note">Royal Fishing appears twice in the source catalog and is listed once here. The public fishing view does not display provider names, so none are inferred from image filenames.</p>
+</details><p><a class="btn btn-secondary" href="https://luckyaces.net/" target="_blank" rel="noopener noreferrer">View the Luckyaces platform</a> <a class="btn btn-primary" href="#apply">Discuss platform services</a></p></div>
+    </section>
 
-  <div class="wrap trust-strip">
-    <div class="trust-grid">
-      <div class="trust-card">
-        <div class="icon">01</div>
-        <h3>Faster Rollout</h3>
-        <p>Built for operators who want a cleaner path from first contact to live deployment without unnecessary delays.</p>
+    <section id="international" class="wrap section" aria-labelledby="international-title">
+      <span class="eyebrow">International versions / Custom development</span>
+      <h2 id="international-title" class="section-title left-title">A platform adapted to your business.</h2>
+      <p class="intro-line">LuckyOne Games can customize international platform versions around a customer's language, currency, and operating requirements. Tell us which market you serve and how your team works so we can define the project together.</p>
+      <div class="service-grid">
+        <article class="card"><h3>Language &amp; interface</h3><p>Discuss the customer-facing language, interface wording, and localization needs for your international version. The languages and screens included are agreed in the project scope.</p></article>
+        <article class="card"><h3>Currency configuration</h3><p>Specify your required currency, display formats, and related operating requirements. Supported configurations are assessed for your project; currency customization does not imply local payment processing.</p></article>
+        <article class="card"><h3>Operating requirements</h3><p>Share the workflows, business rules, and requested functions your operation needs. Feasibility, integrations, responsibilities, and delivery scope are reviewed before agreement.</p></article>
       </div>
-
-      <div class="trust-card">
-        <div class="icon">02</div>
-        <h3>Business-Ready Structure</h3>
-        <p>Support for store environments, multi-location operations, and partner-led growth models.</p>
+      <p class="payment-note"><strong>Scope and availability:</strong> Customization is subject to technical review and an agreed project scope. Local licensing, every payment method, and every requested feature are not automatically included. Payment system support described on this website is for U.S. projects only and carries a separate service fee.</p>
+      <a class="btn btn-secondary" href="#apply">Discuss an international version</a>
+    </section>
+    <section id="hardware" class="machine-section hardware-feature" aria-labelledby="hardware-title"><div class="wrap">
+      <span class="eyebrow">02 / Machines, mainboards &amp; on-site systems</span>
+      <div class="hardware-heading"><h2 id="hardware-title">Your machine.<br><em>Your market. Your requirements.</em></h2><p class="lead">Machine customization, international currency configuration, and small-scale offline casino system projects — built around a clearly defined scope.</p></div>
+      <p class="hardware-status">IN DEVELOPMENT · Machine and integrated mainboard program with our contracted team in Korea</p>
+      <figure class="hardware-concept"><img src="media/machine-concept-hero.png" width="1672" height="941" alt="LuckyOne portrait and dual-screen machine design concepts"><figcaption><strong>DESIGN CONCEPTS / IN DEVELOPMENT.</strong> Visual directions for the LuckyOne machine program. Illustrations are not photographs of completed products or evidence of certification, production readiness, or final specifications.</figcaption></figure>
+      <div class="machine-concept-pair"><figure class="hardware-concept"><img src="media/machine-concept-dual.png" width="1024" height="1536" alt="LuckyOne dual-screen cabinet design concept"><figcaption><strong>Dual-screen concept.</strong> Screen arrangement, cabinet finishes and peripheral layout are design options for project discussion. Shown game screens are illustrative.</figcaption></figure><figure class="hardware-concept"><img src="media/machine-concept-portrait.png" width="1024" height="1536" alt="LuckyOne portrait-screen cabinet design concept"><figcaption><strong>Portrait-screen concept.</strong> A vertical display direction for customization discussions. Final hardware, software and supported peripherals remain subject to development.</figcaption></figure></div>
+      <div class="service-grid hardware-services">
+        <article class="card"><span class="status-label">Machine customization</span><h3>A machine shaped around your project.</h3><p>Discuss cabinet design, display layout, branding, software functions, and peripheral requirements. The customization options, feasibility, and specifications are agreed during development.</p></article>
+        <article class="card"><span class="status-label">International currency</span><h3>Plan for your target currency.</h3><p>Currency display and software configuration can be scoped for the target market. Physical banknote acceptance depends separately on the selected bill validator, supported currency dataset, country firmware, and integration testing. Support for every country or currency is not assumed.</p></article>
+        <article class="card"><span class="status-label">Small-scale offline casinos</span><h3>System planning &amp; custom development.</h3><p>Consultation on system setup and custom development for legally authorized operators, subject to the permits required in their jurisdiction. We review the venue's machine, software, integration, and operational requirements to define the project.</p></article>
       </div>
-
-      <div class="trust-card">
-        <div class="icon">03</div>
-        <h3>Professional Onboarding</h3>
-        <p>Private guidance through setup, deployment planning, and day-to-day operating structure.</p>
+      <div class="difference-grid hardware-details">
+        <div class="difference-card"><h3>Inside the development program</h3><ul class="highlight-list"><li><strong>Android-based integrated mainboard</strong> for the planned machine architecture.</li><li><strong>Game downloads and updates</strong> as part of the software delivery structure.</li><li><strong>JCM bill validator integration</strong> as a peripheral development target.</li><li><strong>SAS communication</strong> subject to licensing and technical validation.</li></ul></div>
+        <div class="difference-card"><h3>A defined scope for each market</h3><p>Georgia COAM is an initial application target for the hardware program. COAM requirements are separate from casino operating authorization. No casino licence or hardware certification is represented here.</p><p>Payment system support described on this website remains U.S.-only and carries a separate service fee. International currency configuration does not expand that service to other countries.</p></div>
       </div>
-
-      <div class="trust-card">
-        <div class="icon">04</div>
-        <h3>Scalable Support</h3>
-        <p>Designed for businesses looking beyond a one-off install toward repeatable growth and expansion.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap differentiator-section">
-    <div class="difference-grid">
-      <div class="difference-card">
-        <h3>Why Serious Operators Choose a Different Standard</h3>
-        <p>
-          Many suppliers rely on generic, recycled, or unstable rollout models that create unnecessary friction for operators.
-          LuckyOne is positioned for partners who want a more polished and structured business setup experience.
-        </p>
-        <ul class="check-list">
-          <li>Cleaner deployment structure for business partners</li>
-          <li>Stronger focus on operational continuity and presentation</li>
-          <li>Professional onboarding for qualified operators</li>
-          <li>Better fit for stores, venues, and multi-unit businesses</li>
-        </ul>
-      </div>
-
-      <div class="difference-card">
-        <h3>What You Can Expect</h3>
-        <p>
-          This is built for businesses that want to move quickly while keeping their setup process organized,
-          private, and scalable from day one.
-        </p>
-        <ul class="check-list">
-          <li>Launch timeline as fast as 3 days for qualified setups</li>
-          <li>Free setup available for approved operators</li>
-          <li>Multi-level business structure support</li>
-          <li>Private demo and onboarding path</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap audience-section">
-    <div class="audience-box">
-      <h2>Built for Real Operators, Not Casual Inquiries</h2>
-      <p>
-        Best fit for businesses that already operate a location, manage multiple stores, or want a structured platform setup with room to expand.
-      </p>
-      <div class="audience-tags">
-        <span>Internet Cafe Owners</span>
-        <span>Multi-Location Operators</span>
-        <span>Distribution Partners</span>
-        <span>Store Expansion Projects</span>
-        <span>Private B2B Onboarding</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap section" id="providers">
-    <h2 class="section-title">Featured Provider Brands</h2>
-    <p class="section-copy">
-      Recognized content brands presented in a cleaner sales-ready format. Click any card to open a larger sample image.
-    </p>
-
-    <div class="provider-grid">
-      <div class="provider-card provider-modal-trigger" data-title="Evolution" data-sample="images/evolution-sample.jpg" data-caption="Sample showcase image for Evolution.">
-        <img src="images/evolution.jpg" alt="Evolution" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Evolution</div>
-        <div class="provider-info">
-          <strong>Evolution</strong>
-          <span>Premium live table and interactive entertainment content</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="Pragmatic Play" data-sample="images/pragmaticplay-sample.jpg" data-caption="Sample showcase image for Pragmatic Play.">
-        <img src="images/pragmaticplay.jpg" alt="Pragmatic Play" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Pragmatic Play</div>
-        <div class="provider-info">
-          <strong>Pragmatic Play</strong>
-          <span>Popular high-appeal content lineup with broad category coverage</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="Dream Gaming" data-sample="images/dreamgaming-sample.jpg" data-caption="Sample showcase image for Dream Gaming.">
-        <img src="images/dreamgaming.jpg" alt="Dream Gaming" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Dream Gaming</div>
-        <div class="provider-info">
-          <strong>Dream Gaming</strong>
-          <span>Immersive dealer-style content and premium presentation</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="Microgaming" data-sample="images/microgaming-sample.jpg" data-caption="Sample showcase image for Microgaming.">
-        <img src="images/microgaming.jpg" alt="Microgaming" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Microgaming</div>
-        <div class="provider-info">
-          <strong>Microgaming</strong>
-          <span>Established digital content library and classic portfolio depth</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="CQ9" data-sample="images/cq9-sample.jpg" data-caption="Sample showcase image for CQ9.">
-        <img src="images/cq9.jpg" alt="CQ9" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">CQ9</div>
-        <div class="provider-info">
-          <strong>CQ9</strong>
-          <span>Visually strong themed content with broad player appeal</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="PG Soft" data-sample="images/pgsoft-sample.jpg" data-caption="Sample showcase image for PG Soft.">
-        <img src="images/pgsoft.jpg" alt="PG Soft" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">PG Soft</div>
-        <div class="provider-info">
-          <strong>PG Soft</strong>
-          <span>Mobile-first premium content presentation and smooth UX</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="Habanero" data-sample="images/habanero-sample.jpg" data-caption="Sample showcase image for Habanero.">
-        <img src="images/habanero.jpg" alt="Habanero" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Habanero</div>
-        <div class="provider-info">
-          <strong>Habanero</strong>
-          <span>Fast-loading content with broad theme coverage</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="Playson" data-sample="images/playson-sample.jpg" data-caption="Sample showcase image for Playson.">
-        <img src="images/playson.jpg" alt="Playson" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Playson</div>
-        <div class="provider-info">
-          <strong>Playson</strong>
-          <span>Recognizable content with strong visual identity</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="Booongo" data-sample="images/booongo-sample.jpg" data-caption="Sample showcase image for Booongo.">
-        <img src="images/booongo.jpg" alt="Booongo" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Booongo</div>
-        <div class="provider-info">
-          <strong>Booongo</strong>
-          <span>Modern content catalog and mobile-friendly presentation</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-
-      <div class="provider-card provider-modal-trigger" data-title="Playtech" data-sample="images/playtech-sample.jpg" data-caption="Sample showcase image for Playtech.">
-        <img src="images/playtech.jpg" alt="Playtech" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="fallback">Playtech</div>
-        <div class="provider-info">
-          <strong>Playtech</strong>
-          <span>Enterprise-grade platform positioning and premium catalog</span>
-          <span class="click-hint">Click to view sample</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap solutions-section">
-    <h2 class="section-title">What Your Business Gets</h2>
-    <p class="section-copy">
-      A stronger business-facing setup path for launch, operations, partner structure, and expansion planning.
-    </p>
-
-    <div class="solutions-grid">
-      <div class="card">
-        <h3>Fast Launch Support</h3>
-        <p>Reduce friction during initial setup with a structured onboarding path for qualified operators.</p>
-      </div>
-
-      <div class="card">
-        <h3>Scalable Business Model</h3>
-        <p>Support for single-store setups, multi-location operations, and larger partner structures.</p>
-      </div>
-
-      <div class="card">
-        <h3>Operational Continuity</h3>
-        <p>Built with business stability, recovery-focused thinking, and cleaner day-to-day management in mind.</p>
-      </div>
-
-      <div class="card">
-        <h3>Professional Presentation</h3>
-        <p>Improve the way your business presents content, systems, and in-location deployment opportunities.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="machine-section">
-    <div class="wrap machine-grid">
-      <div class="machine-media">
-        <div class="media-card">
-          <video controls preload="metadata" poster="media/video-poster-1.jpg">
-            <source src="media/machine-video-1.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;">
-          <div class="media-card"><img src="media/machine-photo-1.jpg" alt="Custom business cabinet option"></div>
-          <div class="media-card"><img src="media/machine-photo-2.jpg" alt="Store-ready machine setup"></div>
-        </div>
-      </div>
-
-      <div class="machine-info">
-        <span class="eyebrow">In-Store Advantage</span>
-        <h2>Cabinet Solutions Designed for Physical Business Locations</h2>
-        <p class="lead">
-          Create a stronger in-location presentation with customizable cabinet solutions built for store environments,
-          venue deployment, and cleaner operational management.
-        </p>
-
-        <ul class="highlight-list">
-          <li><strong>Store-ready design:</strong> Built for business environments and physical placement.</li>
-          <li><strong>Flexible deployment:</strong> Suitable for single or multiple machine locations.</li>
-          <li><strong>Centralized oversight:</strong> Supports cleaner multi-environment management structure.</li>
-          <li><strong>Professional appearance:</strong> Premium presentation for qualified operators.</li>
-        </ul>
-
-        <a href="#apply" class="btn btn-primary">Ask About Business Solutions</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap cta-banner">
-    <div class="cta-panel">
-      <div>
-        <h2>Ready to Move Faster Than a Standard Rollout?</h2>
-        <p>
-          Free setup is available for qualified operators. If your business is planning a new launch, location expansion,
-          or partner deployment, this is the best time to request a private review.
-        </p>
-      </div>
-
-      <div class="cta-points">
-        <span>As fast as 3-day setup for qualified projects</span>
-        <span>Free setup available for approved operators</span>
-        <span>Private onboarding and business-first communication</span>
-        <span>Limited onboarding capacity for new partners</span>
-      </div>
-    </div>
-  </div>
-
-  <div id="apply" class="form-section wrap">
-    <div class="form-container">
-      <h3>Apply for Free Setup or Request a Private Demo</h3>
-
-      <p class="form-subtext">
-        Tell us about your business type, store model, or expansion plan. We review inquiries from qualified operators and business partners.
-      </p>
-
-      <div class="offer-box">
-        <div class="offer-item">
-          <strong>Fast Review</strong>
-          <span>Qualified inquiries reviewed quickly for next-step fit.</span>
-        </div>
-        <div class="offer-item">
-          <strong>Private Process</strong>
-          <span>Business-first communication and onboarding guidance.</span>
-        </div>
-        <div class="offer-item">
-          <strong>Qualified Free Setup</strong>
-          <span>Available for approved operators and partner projects.</span>
-        </div>
-      </div>
-
-      <div class="form-note">
-        Best results: use a business email and briefly explain whether you operate a single store, multiple locations, or a larger partner network.
-      </div>
-
+      <div class="development-note"><strong>Development and project consultation.</strong> Final specifications, supported currencies, integrations, production availability, and delivery timing depend on development, testing, applicable approvals, and a written project scope.</div>
+      <div class="hero-cta-row"><a class="btn btn-primary" href="#apply">Discuss your machine project</a><a class="btn btn-secondary" href="#international">Explore international customization</a></div>
+      <details class="hardware-reference"><summary>View existing cabinet reference media</summary><div class="machine-grid"><figure class="media-card"><video controls playsinline preload="none" poster="media/video-poster-1.jpg" aria-label="Existing cabinet reference video"><source src="media/machine-video-1.mp4" type="video/mp4"></video><figcaption>Reference footage from the previous website, not the completed new machine.</figcaption></figure><figure class="media-card"><img src="media/machine-photo-1.jpg" alt="Existing cabinet design reference"><figcaption>Existing cabinet reference.</figcaption></figure></div></details>
+    </div></section>
+    <section class="wrap section" aria-labelledby="process-title"><span class="eyebrow">03 / Start a conversation</span><h2 class="section-title left-title" id="process-title">Tell us what you’re building.</h2><p class="intro-line">Share your market, business model, and project requirements so we can discuss the relevant service and next steps.</p>
+      <div class="trust-grid"><article class="trust-card"><div class="icon">01</div><h3>Share your needs</h3><p>Tell us about your business, location, and goals.</p></article><article class="trust-card"><div class="icon">02</div><h3>Explore the fit</h3><p>Discuss platform services, custom development, distribution, or hardware development.</p></article><article class="trust-card"><div class="icon">03</div><h3>Define the scope</h3><p>Review technical needs, responsibilities, and project-specific terms.</p></article><article class="trust-card"><div class="icon">04</div><h3>Agree next steps</h3><p>Confirm the work and timing based on the agreed scope.</p></article></div>
+    </section>
+    <section id="apply" class="form-section wrap" aria-labelledby="contact-title"><div class="form-container">
+      <span class="eyebrow">Let’s talk business</span><h2 id="contact-title">Connect with LuckyOne Games.</h2>
+      <a class="contact-email" href="mailto:noah@luckyonegames.com">noah@luckyonegames.com</a>
+      <p class="form-subtext">Tell us about your platform, custom development, U.S. distribution, or hardware development inquiry.</p>
       <form id="contactForm" action="https://formspree.io/f/mdawqqqp" method="POST">
-        <input type="text" name="_gotcha" style="display:none">
-
-        <div class="two-col">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Business Email" required>
-        </div>
-
-        <select name="business_type" required>
-          <option value="">Select Business Type</option>
-          <option value="Single Store">Single Store / Internet Cafe</option>
-          <option value="Multiple Locations">Multiple Locations</option>
-          <option value="Distributor or Partner">Distributor / Partner</option>
-          <option value="Expansion Project">Expansion Project</option>
-          <option value="Other">Other</option>
-        </select>
-
-        <textarea name="message" placeholder="Tell us about your business, current setup, number of locations, or what you are looking for." required></textarea>
-
-        <button id="submitBtn" type="submit" class="btn btn-primary" style="width:100%; font-size:18px;">
-          Submit Business Inquiry
-        </button>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+        <div class="two-col"><div><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required></div><div><label for="contact-email">Business email</label><input id="contact-email" type="email" name="email" autocomplete="email" required></div></div>
+        <label for="contact-topic">What would you like to discuss?</label><select id="contact-topic" name="business_type" required><option value="">Select a service</option><option>Online platform / private demo</option><option>International version / custom development</option><option>U.S. agency / distribution</option><option>Machine / mainboard development</option><option>Small-scale offline casino system project</option><option>Other business inquiry</option></select>
+        <label for="contact-message">Project details</label><textarea id="contact-message" name="message" placeholder="Your company, country or state, current business, and project requirements." required></textarea>
+        <button id="submitBtn" type="submit" class="btn btn-primary" style="width:100%">Send business inquiry</button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
       </form>
-<p class="privacy-note">
-  No long-term commitment required. Information submitted is used strictly for business inquiries and partner communication.
-</p>
-
-<div class="disclaimer-box" style="margin-top:10px;">
-  <p style="margin:0; font-size:12px; color:var(--muted); line-height:1.7;">
-
-    <strong style="color:#999; font-weight:600;">Business Notice:</strong><br><br>
-
-    <strong>LuckyOne Games Inc.</strong> is a provider of business-to-business (B2B) software development and platform integration services for duly authorized and independently operated business partners. 
-
-    LuckyOne Games Inc. does not engage in or provide any direct services to end users, including, without limitation, account administration, customer support, or the processing, handling, or transmission of funds. 
-
-    All partners and operators utilizing the Company’s software and services are independent entities and bear sole and exclusive responsibility for ensuring that their respective operations comply with all applicable laws, regulations, and licensing requirements within their jurisdictions. 
-
-    <br><br>
-
-    <span style="color:#777;">
-      To the fullest extent permitted by applicable law, LuckyOne Games Inc. shall not be liable for any claims, damages, losses, liabilities, or expenses arising out of or in connection with the use, misuse, or operation of its software, platform, or services by any third party. 
-
-      Any use of the Company’s software or platform outside the scope of applicable laws or regulations shall be undertaken solely at the operator’s own risk, and LuckyOne Games Inc. expressly disclaims any and all liability in connection therewith.
-    </span>
-
-  </p>
-</div>
-    
-    </div>
-  </div>
-
-  <div class="footer wrap">
-    <p>&copy; 2026 <strong>LuckyOne Games Inc.</strong> B2B Platform Solutions. All Rights Reserved.</p>
-  </div>
-
+      <p class="privacy-note">This form uses Formspree to process business inquiries. Please share only the information needed to discuss your project.</p>
+      <div class="disclaimer-box"><p><strong>Business information</strong><br>Services, availability, and project terms are discussed individually. Business partners are responsible for applicable operating requirements in their markets. The hardware development program remains subject to technical validation and applicable approvals.</p></div>
+    </div></section>
+  </main>
+  <footer class="footer wrap"><p>&copy; 2026 <strong>LuckyOne Games Inc.</strong> All rights reserved.</p><p>Game platforms &middot; Custom development &middot; U.S. distribution &middot; Hardware development</p><a href="mailto:noah@luckyonegames.com">noah@luckyonegames.com</a></footer>
   <div id="providerModal" class="provider-modal" aria-hidden="true">
     <div class="provider-modal-backdrop"></div>
 
@@ -1309,92 +1051,29 @@
     </div>
   </div>
 
+
   <script>
-    const providerCards = document.querySelectorAll('.provider-modal-trigger');
-    const providerModal = document.getElementById('providerModal');
-    const providerModalImage = document.getElementById('providerModalImage');
-    const providerModalTitle = document.getElementById('providerModalTitle');
-    const providerModalCaption = document.getElementById('providerModalCaption');
-    const providerModalClose = document.getElementById('providerModalClose');
-    const providerModalBackdrop = document.querySelector('.provider-modal-backdrop');
-
-    function openProviderModal(title, sample, caption) {
-      providerModalTitle.textContent = title || 'Provider Sample';
-      providerModalCaption.textContent = caption || '';
-      providerModalImage.src = sample || '';
-      providerModalImage.alt = title || 'Provider sample image';
-      providerModal.classList.add('active');
-      providerModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeProviderModal() {
-      providerModal.classList.remove('active');
-      providerModal.setAttribute('aria-hidden', 'true');
-      providerModalImage.src = '';
-      document.body.style.overflow = '';
-    }
-
-    providerCards.forEach(card => {
-      card.addEventListener('click', () => {
-        openProviderModal(
-          card.dataset.title,
-          card.dataset.sample,
-          card.dataset.caption
-        );
-      });
+    const modal = document.getElementById('providerModal');
+    const image = document.getElementById('providerModalImage');
+    const closeButton = document.getElementById('providerModalClose');
+    let previousFocus;
+    function closeModal(){modal.classList.remove('active');modal.setAttribute('aria-hidden','true');image.removeAttribute('src');document.body.style.overflow='';previousFocus?.focus();}
+    function openModal(card){previousFocus=card;document.getElementById('providerModalTitle').textContent=card.dataset.title;document.getElementById('providerModalCaption').textContent=card.dataset.caption;image.src=card.dataset.sample;image.alt=card.dataset.title+' illustrative sample';modal.classList.add('active');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';closeButton.focus();}
+    document.querySelectorAll('.provider-modal-trigger').forEach(card=>{card.addEventListener('click',()=>openModal(card));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(card);}});});
+    closeButton.addEventListener('click',closeModal);document.querySelector('.provider-modal-backdrop').addEventListener('click',closeModal);
+    document.addEventListener('keydown',e=>{if(modal.classList.contains('active')){if(e.key==='Escape')closeModal();if(e.key==='Tab'){e.preventDefault();closeButton.focus();}}});
+    image.addEventListener('error',()=>{document.getElementById('providerModalCaption').textContent='This sample is unavailable. Please contact us for details.';});
+    const form=document.getElementById('contactForm');const button=document.getElementById('submitBtn');const status=document.getElementById('formStatus');
+    form.addEventListener('submit',async e=>{
+      e.preventDefault();button.disabled=true;button.textContent='Sending…';status.textContent='';
+      const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),15000);
+      try{
+        const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'},signal:controller.signal});
+        if(!response.ok)throw new Error('Submission failed');
+        sessionStorage.setItem('luckyoneInquiryAccepted','true');window.location.href='thank-you.html';
+      }catch(error){status.textContent='We could not confirm your submission. Please try again or email noah@luckyonegames.com.';button.disabled=false;button.textContent='Send business inquiry';}
+      finally{clearTimeout(timer);}
     });
-
-    providerModalClose.addEventListener('click', closeProviderModal);
-    providerModalBackdrop.addEventListener('click', closeProviderModal);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && providerModal.classList.contains('active')) {
-        closeProviderModal();
-      }
-    });
-
-    providerModalImage.addEventListener('error', function () {
-      providerModalCaption.textContent = 'Sample image not found. Check the file path and file name.';
-    });
-
-    const contactForm = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    if (contactForm) {
-      contactForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        const originalText = submitBtn.textContent;
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
-
-        const formData = new FormData(contactForm);
-
-        try {
-          const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
-          });
-
-          if (response.ok) {
-            window.location.href = 'https://luckyonegames.com/thank-you.html';
-          } else {
-            alert('Submission failed. Please try again.');
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-          }
-        } catch (error) {
-          alert('Network error. Please try again.');
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        }
-      });
-    }
   </script>
-
 </body>
 </html>

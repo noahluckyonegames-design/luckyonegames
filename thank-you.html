@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18041424138"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-18041424138');
+    if (['luckyonegames.com','www.luckyonegames.com'].includes(location.hostname)) { const tag=document.createElement('script');tag.async=true;tag.src='https://www.googletagmanager.com/gtag/js?id=AW-18041424138';document.head.appendChild(tag);gtag('config','AW-18041424138'); }
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You | LuckyOne Gaming Solutions</title>
-  <meta name="description" content="Thank you for contacting LuckyOne Gaming Solutions. Our team will review your business inquiry and respond soon.">
+  <title>Thank You | LuckyOne Games Inc.</title>
+  <meta name="description" content="Thank you for contacting LuckyOne Games Inc.. Our team will review your business inquiry and respond soon.">
   <meta name="robots" content="noindex,nofollow">
 
   <style>
@@ -172,44 +172,38 @@
       .actions{flex-direction:column}
       .btn{width:100%}
     }
-  </style>
+  .btn{overflow-wrap:anywhere;min-width:0} :focus-visible{outline:3px solid var(--gold);outline-offset:4px} </style>
 </head>
 
 <body>
   <div class="card">
     <div class="badge">✓</div>
-    <h1>Thank You</h1>
-    <p>Your business inquiry has been received successfully.</p>
-    <p class="sub">
-      Our team will review your request and contact you regarding partnership, supplier onboarding,
-      regional distribution, or demo access.
-    </p>
+    <h1>Thank you for your interest.</h1>
+    <p id="inquiry-status">You can contact us at noah@luckyonegames.com to discuss your project.</p>
+    <p class="sub">Platform services, overseas custom development, U.S. distribution, and machine or mainboard development.</p>
 
-    <p class="cta-copy">
-      For faster processing, please contact us directly via Telegram after submission.
-    </p>
+    <p class="cta-copy">For follow-up questions, contact our business team.</p>
 
-    <ul class="box-list">
-      <li><strong>B2B Only</strong>Business inquiries only</li>
-      <li><strong>Internal Review</strong>Applications are reviewed before approval</li>
-      <li><strong>Fastest Contact</strong>Telegram is the quickest way to connect</li>
-    </ul>
+
 
     <div class="actions">
-      <a class="btn btn-primary" href="https://t.me/luckyone_support" target="_blank">
-        Contact via Telegram (Fastest)
+      <a class="btn btn-primary" href="mailto:noah@luckyonegames.com">
+        Email noah@luckyonegames.com
       </a>
-      <a class="btn btn-secondary" href="/">
+      <a class="btn btn-secondary" href="index.html">
         Return to Homepage
       </a>
+      <a class="btn btn-secondary" href="https://t.me/luckyone_support" target="_blank" rel="noopener noreferrer">Contact via Telegram</a>
     </div>
 
-    <div class="note">
-      LuckyOne Gaming Solutions provides business-facing software and partner solutions only.
-      No direct consumer or player services are offered.
-    </div>
+    <div class="note">LuckyOne Games Inc. — Business platform services and hardware development.</div>
   </div>
 
 
-</body>
+<script>
+if(sessionStorage.getItem('luckyoneInquiryAccepted')==='true'){
+document.getElementById('inquiry-status').textContent='Your inquiry was accepted by our form service. This is not a confirmation of email delivery.';
+sessionStorage.removeItem('luckyoneInquiryAccepted');
+}
+</script></body>
 </html>
